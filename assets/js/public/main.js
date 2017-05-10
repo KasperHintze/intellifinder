@@ -3454,271 +3454,6 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _wrapper = require("wrapper6");
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Dependencies
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-var $ = jQuery;
-
-var Functions = function (_Module) {
-	_inherits(Functions, _Module);
-
-	function Functions() {
-		_classCallCheck(this, Functions);
-
-		return _possibleConstructorReturn(this, (Functions.__proto__ || Object.getPrototypeOf(Functions)).apply(this, arguments));
-	}
-
-	_createClass(Functions, [{
-		key: "ready",
-		value: function ready(app) {
-
-			function log(msg) {
-				var style = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-
-
-				var dt = new Date();
-				var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-
-				if ((typeof msg === "undefined" ? "undefined" : _typeof(msg)) == "object") {
-
-					console.log('%c[' + time + ']', 'font-weight:bold; color: #2ecc71; background: #000; ' + style, 'Object(Key, Value)');
-
-					$.each(msg, function (key, value) {
-
-						console.log(key + '.[');
-
-						$.each(value, function (key, value) {
-
-							console.log('     %c' + key + ': ', 'font-weight:bold; color: #3498db; ', value);
-						});
-
-						console.log(']');
-
-						console.log('');
-					});
-				} else {
-
-					console.log('%c[' + time + ']', 'font-weight:bold; color: #2ecc71; background: #000; ' + style, msg);
-				}
-			}
-		}
-	}]);
-
-	return Functions;
-}(_wrapper.Module);
-
-exports.default = Functions;
-
-},{"wrapper6":56}],62:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _wrapper = require('wrapper6');
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Dependencies
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-var $ = jQuery;
-
-var Login = function (_Module) {
-	_inherits(Login, _Module);
-
-	function Login() {
-		_classCallCheck(this, Login);
-
-		return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).apply(this, arguments));
-	}
-
-	_createClass(Login, [{
-		key: 'ready',
-		value: function ready(app) {
-
-			console.log('Loaded login.js');
-
-			/* Vars */
-			var amount = 1;
-
-			// Remove clicked span
-			$(document).on('click', '.display span', function () {
-				$(this).remove();
-				amount = amount - 1;
-			});
-
-			// Reset password
-			$(document).on('click', '.reset', function () {
-				resetSpan();
-			});
-
-			// On press
-			$(document).keypress(function (e) {
-				// Keypress 1
-				if (e.which == 49) {
-					appendSpan(1);
-				}
-				// Keypress 2
-				else if (e.which == 50) {
-						appendSpan(2);
-					}
-					// Keypress 3
-					else if (e.which == 51) {
-							appendSpan(3);
-						}
-						// Keypress 4
-						else if (e.which == 52) {
-								appendSpan(4);
-							}
-							// Keypress 5
-							else if (e.which == 53) {
-									appendSpan(5);
-								}
-								// Keypress 6
-								else if (e.which == 54) {
-										appendSpan(6);
-									}
-									// Keypress 7
-									else if (e.which == 55) {
-											appendSpan(7);
-										}
-										// Keypress 8
-										else if (e.which == 56) {
-												appendSpan(8);
-											}
-											// Keypress 9
-											else if (e.which == 57) {
-													appendSpan(9);
-												}
-												// Keypress 0
-												else if (e.which == 48) {
-														appendSpan(0);
-													}
-			});
-
-			// On click
-			$(document).on('click', '.number', function () {
-
-				var thisVal = $(this).attr('data-id');
-
-				appendSpan(thisVal);
-			});
-
-			function appendSpan(id) {
-				console.log(amount);
-
-				if (amount == 4) {
-					$('.display').append('<span data-id="' + id + '"></span>');
-					login();
-				} else if (amount > 4) {} else {
-					$('.display').append('<span data-id="' + id + '"></span>');
-				}
-				amount++;
-			}
-
-			function resetSpan() {
-
-				$('.display span').each(function () {
-					$(this).remove();
-				});
-
-				amount = 1;
-			}
-
-			function login() {
-
-				// Show loader
-				$('.status .circle-loader').css('display', 'inline-block');
-
-				// Get password
-				var password = '';
-				$('.display span').each(function () {
-					var thisNumber = $(this).attr('data-id');
-					password += thisNumber;
-				});
-
-				// Ajax here
-				$.ajax({
-
-					url: "code/code_login.php",
-
-					data: {
-						password: password
-					},
-
-					type: 'POST',
-
-					success: function success(data) {
-
-						console.log(data);
-
-						$('.status').html('<svg class="circle-loader progress" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="8"></svg>');
-
-						if (data == 'success') {
-
-							setTimeout(function () {
-
-								$('.status').html('<i class="material-icons success">done</i>');
-
-								// Redirect
-								setTimeout(function () {
-
-									window.location.replace("pages/index.php");
-								}, 500);
-							}, 1500);
-						} else {
-
-							setTimeout(function () {
-
-								$('.status').html('<i class="material-icons error">highlight_off</i>');
-
-								resetSpan();
-
-								setTimeout(function () {
-
-									$('.status').html('');
-								}, 1500);
-							}, 1500);
-						}
-					}
-
-				});
-			}
-		}
-	}]);
-
-	return Login;
-}(_wrapper.Module);
-
-exports.default = Login;
-
-},{"wrapper6":56}],63:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _wrapper = require("wrapper6");
@@ -3758,22 +3493,14 @@ var Main = function (_Module) {
 
 exports.default = Main;
 
-},{"wrapper6":56}],64:[function(require,module,exports){
+},{"wrapper6":56}],62:[function(require,module,exports){
 "use strict";
 
 var _wrapper = require("wrapper6");
 
-var _functions = require("../_modules/functions.js");
-
-var _functions2 = _interopRequireDefault(_functions);
-
 var _main = require("../_modules/main.js");
 
 var _main2 = _interopRequireDefault(_main);
-
-var _login = require("../_modules/login.js");
-
-var _login2 = _interopRequireDefault(_login);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3793,12 +3520,10 @@ var app = window.app = new _wrapper.Application(window.options || {});
 
 /* Register modules
  ----------------------------------------------------------*/
-app.use(_functions2.default);
 app.use(_main2.default);
-app.use(_login2.default);
 //import $ from "jquery";
 //window.jQuery = window.$ = $;
 
-},{"../_modules/functions.js":61,"../_modules/login.js":62,"../_modules/main.js":63,"wrapper6":56}]},{},[64]);
+},{"../_modules/main.js":61,"wrapper6":56}]},{},[62]);
 
 //# sourceMappingURL=main.js.map
