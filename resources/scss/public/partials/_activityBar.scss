@@ -1,0 +1,79 @@
+#activityBar {
+	width: 250px;
+	height: calc(100vh - 50px);
+	position: fixed;
+	right: 0px;
+	top: 50px;
+	border-left: 1px solid $border_color;
+	background: #FFF;
+
+	h3 {
+		color: $primary_dark;
+		float: left;
+		margin: 20px 0px 0px 20px;
+	}
+
+	ul {
+		float: left;
+		width: 100%;
+		border-top: 1px solid $border_color;
+		margin-top: 20px;
+
+		.user {
+			border-left: 3px solid #5188F7;
+			box-shadow: -10px 0px 40px #5188F7;
+		}
+
+		.system {
+			border-left: 3px solid #9B59B6;
+		}
+
+		.noftication {
+			border-left: 3px solid #E74C3C;
+		}
+
+		li {
+
+			width: 100%;
+			height: auto;
+			min-height: 80px;
+			padding: 20px;
+			list-style: none;
+			border-bottom: 1px solid $border_color;
+			float: left;
+
+			p {
+				color: $text_color;
+				float: left;
+			}
+
+			span {
+				color: $text_color;
+				float: right;
+				font-size: 11px;
+				font-weight: 100;
+			}
+
+			h6 {
+				float: left;
+				width: 100%;
+				margin-top: 15px;
+				color: $text_color_light;
+
+				&::before {
+
+					content: '';
+					width: 15px;
+					height: 1px;
+					background: $text_color_light;
+					float: left;
+					margin-top: 5px;
+					margin-right: 10px;
+
+				}
+			}
+
+		}
+
+	}
+}

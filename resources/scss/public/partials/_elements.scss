@@ -1,0 +1,86 @@
+/* Loader */
+.circle-loader {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 15px;
+    fill: transparent;
+    stroke: white;
+    stroke-width: 3;
+    animation: dash 2s ease infinite, rotate 2s linear infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 95;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 85, 95;
+        stroke-dashoffset: -25;
+    }
+    100% {
+        stroke-dasharray: 85, 95;
+        stroke-dashoffset: -93;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulse */
+
+.pulseWrap {
+
+    position: relative;
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+
+    .pulseDot {
+        position: absolute;
+        display: inline-block;
+        z-index: 1;
+        width: 15px;
+        height: 15px;
+        background-color: $primary_green;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+    }
+
+    .pulser {
+        position: absolute;
+        width:20px;
+        height:20px;
+        background-color: $primary_green;
+        border-radius: 50%;
+        transform: scale(0.1);
+        transform-origin: center center;
+        animation: pulse 2s ease-out infinite
+    }
+
+    @keyframes pulse {
+        0% {
+            opacity: .9;
+            transform: scale(0.1)
+        }
+
+        80% {
+            opacity: 0
+        }
+
+        100% {
+            transform: scale(2);
+            opacity: 0
+        }
+    }
+
+}

@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+  "dev": "gulp watch"
+  },
+  "devDependencies": {
+  "gulp": "latest",
+  "gulp-sass": "latest",
+  "gulp-sourcemaps": "latest",
+  "gulp-autoprefixer": "latest",
+  "alert.js": "^0.1.35",
+  "bootstrap-sass": "^3.3.7",
+  "es6-symbol": "^3.1.0",
+  "jquery": "^3.1.1",
+  "laravel-elixir": "^6.0.0-15",
+  "laravel-elixir-browserify-official": "^0.1.3",
+  "laravel-elixir-vueify": "^2.0.0",
+  "selectize": "^0.12.4",
+  "wrapper6": "^0.2.20"
+  }
+}
