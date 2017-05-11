@@ -1,6 +1,6 @@
 header{
   position:relative;
-  color:$white-font;
+  color:#FFF;
   .header-background{
     height:930px;
     background-color:$primary-orange;
@@ -51,7 +51,7 @@ header{
           a{
             font-size:20px;
             font-weight:400;
-            color:$white-font;
+            color:#FFF;
             text-decoration: none;
             transition: all 0.1s ease-in;
             
@@ -103,6 +103,11 @@ header{
       .col-md-5 {
         .device {
           margin-top: 150px;
+
+          @media only screen and (max-width: 991px) {
+            display: none;
+          }
+
           img {
             width: 253px; 
             height: 461px;
