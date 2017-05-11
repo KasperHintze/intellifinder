@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <h1>MORE CUSTOMER CASES</h1>
+    <h2>MORE CUSTOMER CASES</h2>
     <p>We help power 100,000+ businesses in 100+ countries and across nearly every industry. Headquartered in San Francisco, Stripe has 9 global offices and hundreds of people working to help transform how modern businesses are built and run.</p>
 
       <div class="row">
