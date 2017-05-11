@@ -6,7 +6,16 @@
 
 	     	<div class="col-md-6">
 
-				<h2 class="text-align-right">The complete app for <br>intelligent business</h2>
+	     		<div class="row">
+
+		     		<div class="pulseWrap">
+						<div class="pulseDot"></div>
+						<div class="pulser"></div>
+					</div>
+
+					<h2 class="text-align-right">The complete app for <br>intelligent business</h2>
+
+				</div>
 
 				<p class="text-align-right">We believe that payments is a problem rooted in code 
 				not finance. We obsessively seek out elegant, composable
