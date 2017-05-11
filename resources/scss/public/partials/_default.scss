@@ -7,14 +7,24 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
 }
 
 p{
   font-size:17px;
 }
 
+i{
+	color:#fff;
+}
+
 h1, h2, h3, h4, h5, h6{
   font-weight:600;/*Medium*/
+	color: $primary-green;
+}
+
+h1 {
+	font-size:30px;
 }
 
 h2 {
@@ -102,7 +112,7 @@ h2 {
 
 }
 
-/* 
+/*
 
 	Default classes
 

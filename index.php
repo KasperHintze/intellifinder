@@ -17,5 +17,11 @@ $title = 'Intellifinder';
 <!-- Introduction section (Small description and preview) -->
 <?php include_once($prefix.'modules/intro.php'); ?>
 
+<!-- Cases section -->
+<?php include_once($prefix.'modules/cases.php'); ?>
+
+<!-- Tour section -->
+<?php include_once($prefix.'modules/tour.php'); ?>
+
 </body>
 </html>
