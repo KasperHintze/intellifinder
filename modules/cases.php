@@ -38,7 +38,7 @@
             <div class="card-content-right">
 
               <h3>Coop</h3>
-              <p>– Intelligent detektorløsning i stedet for detektivarbejde</p>
+              <p>– Changing out router in all Coop shops</p>
 
               <button type="button" class="btn btn-success">Read more</button>
 
