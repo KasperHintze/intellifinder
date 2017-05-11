@@ -2,6 +2,26 @@
 	margin-top: 280px;
 	float: left;
 	width: 100%;
+	position: relative;
 
-	
+	.container {
+		.row {
+			.col-md-7 {
+
+			}
+			.device {
+				position: absolute;
+				right: -20px;
+				top: -50px;
+				width: 712px;
+    			height: 552px;
+
+				img {
+					height: 680px;
+					height: 510px;
+				}
+
+			}
+		}
+	}
 }

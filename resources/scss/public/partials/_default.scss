@@ -69,6 +69,11 @@ h2 {
     box-shadow:$hover-shadow;
   }
 
+  &:active {
+    transform: translateY(1px);
+    box-shadow:$hover-shadow;
+  }
+
 }
 
 .btn-success{
@@ -78,6 +83,10 @@ h2 {
     	background: darken($primary-green, 5%);
   	}
 
+  	&:active {
+    	background: darken($primary-green, 5%) !important;
+  	}
+
 }
 
 .btn-default{
@@ -85,6 +94,10 @@ h2 {
 
 	&:hover {
     	background: darken(#FFF, 5%);
+  	}
+
+  	&:active {
+    	background: darken(#FFF, 5%) !important;
   	}
 
 }
@@ -99,4 +112,14 @@ h2 {
 
 	text-align: right;
 
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
