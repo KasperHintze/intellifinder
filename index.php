@@ -11,7 +11,17 @@ $title = 'Intellifinder';
     </head>
 <body>
 
-	
+<!-- Header section (Gradient) -->
+<?php include_once($prefix.'modules/header.php'); ?>
+
+<!-- Introduction section (Small description and preview) -->
+<?php include_once($prefix.'modules/intro.php'); ?>
+
+<!-- Cases section -->
+<?php include_once($prefix.'modules/cases.php'); ?>
+
+<!-- Tour section -->
+<?php include_once($prefix.'modules/tour.php'); ?>
 
 </body>
 </html>

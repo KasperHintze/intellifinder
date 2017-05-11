@@ -2,9 +2,133 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	line-height: 26px;
 }
 
 body {
-	background: $background;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+p{
+  font-size:17px;
+}
+
+i{
+	color:#fff;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight:600;/*Medium*/
+}
+
+h1 {
+	font-size:30px;
+}
+
+h2 {
+	color: $primary-green;
+	font-size: 22px;
+    line-height: 33px;
+    text-transform: uppercase;
+}
+
+/*
+
+	Devices styling
+
+ */
+
+.device {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    border-radius: 38px;
+    background: #fff;
+    box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 0 2px 6px rgba(0,21,64,.14), 0 10px 20px rgba(0,21,64,.05);
+}
+
+.phone {
+	width: 267px;
+    height: 553px;
+}
+
+.tablet {
+	width: 512px;
+    height: 352px;
+}
+
+/*
+
+	Buttons
+
+ */
+
+.btn{
+  font-size:20px;
+  height:50px;
+  margin-bottom:30px;
+  line-height: 40px;
+  border:none;
+  box-shadow:$standard-shadow;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow:$hover-shadow;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow:$hover-shadow;
+  }
+
+}
+
+.btn-success{
+  	background-color:$primary-green;
+
+	&:hover {
+    	background: darken($primary-green, 5%);
+  	}
+
+  	&:active {
+    	background: darken($primary-green, 5%) !important;
+  	}
+
+}
+
+.btn-default{
+  	background-color:#FFF;
+
+	&:hover {
+    	background: darken(#FFF, 5%);
+  	}
+
+  	&:active {
+    	background: darken(#FFF, 5%) !important;
+  	}
+
+}
+
+/*
+
+	Default classes
+
+*/
+
+.text-align-right {
+
+	text-align: right;
+
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
