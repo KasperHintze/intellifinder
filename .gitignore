@@ -1,5 +1,6 @@
 
-# Created by https://www.gitignore.io/api/git,sass,node,macos,windows,sublimetext
+## Style.css ignore ##
+assets/css/
 
 ### Git ###
 *.orig
