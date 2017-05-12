@@ -1,10 +1,11 @@
 <section class="cases">
   <div class="container">
 
-    <div class="circle-puls">
-      <div class="inner-circle">
-        <i class="fa fa-users"></i>
-      </div>
+    <div class="pulseWrap">
+        <div class="pulseDot">
+            <i class="fa fa-users"></i>
+        </div>
+        <div class="pulser"></div>
     </div>
 
     <h2>MORE CUSTOMER CASES</h2>
