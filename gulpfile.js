@@ -11,7 +11,12 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	elixir = require('laravel-elixir'),
 	fs = require('fs'),
-	path = require('path');
+	path = require('path'),
+    livereload = require('gulp-livereload'),
+    browserSync = require('browser-sync').create();
+
+livereload({ start: true });
+
 function getScripts(dir) {
 	var dirContent = fs.readdirSync(dir);
 	dirContent.forEach(function (file, index) {
@@ -35,12 +40,14 @@ elixir.extend('sass', function (input, output) {
 		return gulp
 			.src(input)
 			.pipe(sourcemaps.init())
-			.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+			.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError).on('change', browserSync.reload))
 			.pipe(sourcemaps.write({includeContent: false}))
 			.pipe(sourcemaps.init({loadMaps: true}))
 			.pipe(autoprefixer())
 			.pipe(sourcemaps.write('.'))
-			.pipe(gulp.dest(output));
+			.pipe(gulp.dest(output))
+            .pipe(livereload())
+            .pipe(browserSync.stream());
 	}).watch(input);
 });
 elixir.extend('scripts', function (mix, input, output) {
@@ -56,6 +63,14 @@ elixir.extend('scripts', function (mix, input, output) {
 	}).watch(input);
 });
 elixir(function (mix) {
+    
+    console.log('');
+    console.log('-----------------------------');
+    console.log('### Beginning gulp watch ###');
+    console.log('-----------------------------');
+    console.log('');
+    
+    livereload.listen();
 	mix.sass(sassInput, sassOutput);
 	var scripts = getScripts(scriptsInputFolder);
 	scripts.forEach(function (script) {
@@ -63,12 +78,15 @@ elixir(function (mix) {
 		console.log(script);
 		var filename = script.replace(scriptsInputFolder.replace('./', ''), '');
 		mix.browserify('./' + script, scriptsOutput + filename);
-
-		console.log('');
-		console.log('-----------------------------');
-		console.log('### Beginning gulp watch ###');
-		console.log('-----------------------------');
-		console.log('');
-
 	});
+    browserSync.init({
+         proxy: 'localhost/intellifinder'
+    });
+    
+    console.log('');
+    console.log('-----------------------------');
+    console.log('### Done compiling ###');
+    console.log('-----------------------------');
+    console.log('');
+    
 });

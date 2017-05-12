@@ -3497,7 +3497,7 @@ exports.default = Main;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+			value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3516,51 +3516,51 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Tour = function (_Module) {
-	_inherits(Tour, _Module);
+			_inherits(Tour, _Module);
 
-	function Tour() {
-		_classCallCheck(this, Tour);
+			function Tour() {
+						_classCallCheck(this, Tour);
 
-		return _possibleConstructorReturn(this, (Tour.__proto__ || Object.getPrototypeOf(Tour)).apply(this, arguments));
-	}
+						return _possibleConstructorReturn(this, (Tour.__proto__ || Object.getPrototypeOf(Tour)).apply(this, arguments));
+			}
 
-	_createClass(Tour, [{
-		key: 'ready',
-		value: function ready(app) {
+			_createClass(Tour, [{
+						key: 'ready',
+						value: function ready(app) {
 
-			console.log('Loaded tour.js');
+									console.log('Loaded tour.js');
 
-			/* Vars */
-			var featureCount = 0,
-			    i = 0;
+									/* Vars */
+									var featureCount = 0,
+									    i = 0;
 
-			$(document).ready(function () {
+									$(document).ready(function () {
 
-				if ($(window).width() < 991) {
-					// Mindre end 991
-				} else {
-					// Do code
+												if ($(window).width() < 991) {
+															// Mindre end 991
+												} else {
+															// Do code
 
-					if ($('.featureWrapper')[0]) {
+															if ($('.featureWrapper')[0]) {
 
-						// Counting features
-						$('.feature').each(function () {
-							featureCount++;
-						});
+																		// Counting features
+																		$('.feature').each(function () {
+																					featureCount++;
+																		});
 
-						// Appending dots
-						for (i = 0; i < featureCount; i++) {
-							$(".dotWrapper").append("<div class='dot'></div>");
+																		// Appending dots
+																		for (i = 0; i < featureCount; i++) {
+																					$(".dotWrapper").append("<div class='dot'></div>");
+																		}
+
+																		$(".dotWrapper .dot:first-child").addClass('dotActive');
+															}
+												}
+									});
 						}
+			}]);
 
-						$(".dotWrapper .dot:first-child").addClass('dotActive');
-					}
-				}
-			});
-		}
-	}]);
-
-	return Tour;
+			return Tour;
 }(_wrapper.Module);
 
 exports.default = Tour;
