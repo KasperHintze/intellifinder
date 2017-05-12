@@ -54,7 +54,7 @@ header{
             color:#FFF;
             text-decoration: none;
             transition: all 0.1s ease-in;
-            
+
             &:hover {
               color: darken(#FFF, 5%);
               opacity: 0.7;
@@ -103,16 +103,32 @@ header{
       .col-md-5 {
         .device {
           margin-top: 150px;
+          transform:translateY(0px);
+          animation:floaty 6s ease-out infinite;
 
           @media only screen and (max-width: 991px) {
             display: none;
           }
 
           img {
-            width: 253px; 
+            width: 253px;
             height: 461px;
           }
         }
+
+      }
+      @keyframes floaty {
+          0% {
+              transform: translateY(0px)
+          }
+
+          50% {
+              transform: translateY(10px);
+          }
+
+          100% {
+              transform: translateY(0px)
+          }
       }
     }
   }
