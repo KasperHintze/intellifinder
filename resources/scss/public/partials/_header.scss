@@ -92,6 +92,7 @@ header{
           margin-right: 30px;
           cursor: pointer;
           transition: all 0.2s ease-in;
+          border-radius: 5px;
 
           &:hover {
             box-shadow:$standard-shadow;

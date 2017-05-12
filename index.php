@@ -23,5 +23,8 @@ $title = 'Intellifinder';
 <!-- Tour section -->
 <?php include_once($prefix.'modules/tour.php'); ?>
 
+<!-- Footer -->
+<?php include_once($prefix.'modules/footer.php'); ?>
+
 </body>
 </html>

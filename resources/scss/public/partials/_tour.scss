@@ -13,7 +13,7 @@
             .device {
                 
                 position: absolute;
-                left: -40px;
+                left: -60px;
 				top: 100px;
 				width: 812px;   
                 height: 652px;
@@ -31,8 +31,19 @@
                 .featureWrapper {
                     
                     width: 100%;
-                    height: auto;
-                    margin-top: 175px;
+                    height: 652px;
+                    margin-top: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    position: relative;
+
+                    h3 {
+                        color: #FFF;
+                        position: absolute;
+                        top: 20px;
+                    }
                     
                     .feature {
                         background: #FFF;
@@ -44,9 +55,27 @@
                         justify-content: center;
                         align-items: center;
                         flex-direction: column;
+                        position: absolute;
+                        top: 100px;
+
+                        &:nth-child(2){
+                            transform: scale(1.03);
+                            opacity: 0.8;
+                        }
+
+                        &:nth-child(3){
+                            transform: scale(1.06);
+                            opacity: 0.6;
+                        }
+
+                        i {
+    
+                            color: $primary-green;
+                            font-size: 72px;
+
+                        }
                         
                         h2 {
-                            text-align: center;
                             margin-bottom: 20px;
                         }
                         
@@ -56,9 +85,51 @@
                         }
                         
                     }
+
+                    .dotWrapper {
+                        width: auto;
+                        height: auto;
+                        position: absolute;
+                        bottom: 30px;
+
+                        .dot {
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 5px;
+                            background: #FFF;
+                            opacity: 0.6;
+                            float: left;
+                            margin: 2.5px;
+                            transition: all 0.2s ease-in;
+                        }
+
+                        .dotActive {
+                            opacity: 1;
+                        }
+
+                    }
                     
                 }
                 
+            }
+
+            .arrowRight {
+
+                font-size: 72px;
+                position: absolute;
+                right: 100px;
+                top: 50%;
+                transform: translateY(50%);
+                margin-top: -72px;
+                cursor: pointer;
+                transition: all 0.1s ease-in;
+                text-shadow: $standard-shadow;
+
+                &:hover {
+                    opacity: 0.8;
+                    text-shadow: $hover-shadow;
+                }
+
             }
             
         }

@@ -13,8 +13,10 @@ var app = window.app = new Application(window.options || {});
 /* Modules
  ----------------------------------------------------------*/
 import Main from "../_modules/main.js";
+import Tour from "../_modules/tour.js";
 /* Register modules
  ----------------------------------------------------------*/
 app.use(Main);
+app.use(Tour);
 //import $ from "jquery";
 //window.jQuery = window.$ = $;

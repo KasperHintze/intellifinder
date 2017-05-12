@@ -9,7 +9,7 @@
 	     		<div class="row">
 
 		     		<div class="pulseWrap">
-						<div class="pulseDot"></div>
+						<div class="pulseDot noBackground"><img src="<?php echo $prefix; ?>assets/img/intellifinder-circle.svg"></div>
 						<div class="pulser"></div>
 					</div>
 

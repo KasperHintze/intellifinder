@@ -3494,6 +3494,78 @@ var Main = function (_Module) {
 exports.default = Main;
 
 },{"wrapper6":56}],62:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wrapper = require('wrapper6');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var $ = jQuery;
+
+var Tour = function (_Module) {
+	_inherits(Tour, _Module);
+
+	function Tour() {
+		_classCallCheck(this, Tour);
+
+		return _possibleConstructorReturn(this, (Tour.__proto__ || Object.getPrototypeOf(Tour)).apply(this, arguments));
+	}
+
+	_createClass(Tour, [{
+		key: 'ready',
+		value: function ready(app) {
+
+			console.log('Loaded tour.js');
+
+			/* Vars */
+			var featureCount = 0,
+			    i = 0;
+
+			$(document).ready(function () {
+
+				if ($(window).width() < 991) {
+					// Mindre end 991
+				} else {
+					// Do code
+
+					if ($('.featureWrapper')[0]) {
+
+						// Counting features
+						$('.feature').each(function () {
+							featureCount++;
+						});
+
+						// Appending dots
+						for (i = 0; i < featureCount; i++) {
+							$(".dotWrapper").append("<div class='dot'></div>");
+						}
+
+						$(".dotWrapper .dot:first-child").addClass('dotActive');
+					}
+				}
+			});
+		}
+	}]);
+
+	return Tour;
+}(_wrapper.Module);
+
+exports.default = Tour;
+
+},{"wrapper6":56}],63:[function(require,module,exports){
 "use strict";
 
 var _wrapper = require("wrapper6");
@@ -3501,6 +3573,10 @@ var _wrapper = require("wrapper6");
 var _main = require("../_modules/main.js");
 
 var _main2 = _interopRequireDefault(_main);
+
+var _tour = require("../_modules/tour.js");
+
+var _tour2 = _interopRequireDefault(_tour);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3521,9 +3597,10 @@ var app = window.app = new _wrapper.Application(window.options || {});
 /* Register modules
  ----------------------------------------------------------*/
 app.use(_main2.default);
+app.use(_tour2.default);
 //import $ from "jquery";
 //window.jQuery = window.$ = $;
 
-},{"../_modules/main.js":61,"wrapper6":56}]},{},[62]);
+},{"../_modules/main.js":61,"../_modules/tour.js":62,"wrapper6":56}]},{},[63]);
 
 //# sourceMappingURL=main.js.map
