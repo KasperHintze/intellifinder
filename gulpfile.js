@@ -62,6 +62,11 @@ elixir.extend('scripts', function (mix, input, output) {
 		});
 	}).watch(input);
 });
+
+gulp.watch('**/*.php').on('change', function () {
+    browserSync.reload();
+});
+
 elixir(function (mix) {
     
     console.log('');
