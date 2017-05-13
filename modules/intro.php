@@ -29,7 +29,7 @@
 				extraneous details, you can get up and running with Stripe in
 				just a couple of minutes.</p>
 
-				<a href="">Discover how businesses use IntelliFinder</a>
+				<a href="#cases">Discover how businesses use IntelliFinder</a>
 
 			</div>
 

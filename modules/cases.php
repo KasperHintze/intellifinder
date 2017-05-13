@@ -1,4 +1,4 @@
-<section class="cases">
+<section id="cases">
   <div class="container">
 
     <div class="pulseWrap">

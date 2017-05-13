@@ -28,7 +28,7 @@
 
                     	<i class="material-icons">touch_app</i>
                         
-                        <h2>Global scale</h2>
+                        <h2>2</h2>
                         
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet neque at pharetra feugiat. Nam non arcu elit. Suspendisse molestie at nisl et vehicula. Curabitur gravida metus mollis neque bibendum, porttitor commodo neque pretium. Mauris ut nulla eget urna ultricies suscipit nec ac nisl. Nunc orci velit, pharetra id.</p>
                         
@@ -38,7 +38,7 @@
 
                     	<i class="material-icons noselect">touch_app</i>
                         
-                        <h2>Global scale</h2>
+                        <h2>3</h2>
                         
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet neque at pharetra feugiat. Nam non arcu elit. Suspendisse molestie at nisl et vehicula. Curabitur gravida metus mollis neque bibendum, porttitor commodo neque pretium. Mauris ut nulla eget urna ultricies suscipit nec ac nisl. Nunc orci velit, pharetra id.</p>
                         

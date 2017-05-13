@@ -18,15 +18,32 @@
 				width: 812px;   
                 height: 652px;
 				z-index: 50;
+                z-index: 9999;
                 
                 img {
 					width: 740px;
 					height: 590px;
 				}
                 
+                @media only screen and (max-width: 1600px) {
+				  left: -140px;
+				}
+                
+                @media only screen and (max-width: 1450px) {
+				  display: none;
+				}
+                
             }
             
             .col-md-6 {
+                
+                @media only screen and (max-width: 1450px) {
+				    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+				}
                 
                 .featureWrapper {
                     
@@ -38,11 +55,47 @@
                     align-items: center;
                     flex-direction: column;
                     position: relative;
+                    z-index: 400;
+                    
+                    @media only screen and (max-width: 1450px) {
+                      width: 600px;
+                    }
+                    
+                    @media only screen and (max-width: 700px) {
+                      width: 500px;
+                    }
+                    
+                    @media only screen and (max-width: 500px) {
+                      width: 100%;
+                    }
 
                     h3 {
                         color: #FFF;
                         position: absolute;
                         top: 20px;
+                    }
+                    
+                    @keyframes sendToBack {
+                        0% {
+                            
+                        }
+
+                        50% {
+                            transform:translateX(-120%);                           
+                            
+                        }
+                        
+                        51% {
+                            z-index: 0;
+                        }
+
+                        100% {
+                            transform:translateX(0px);                               
+                        }
+                    }
+                    
+                    .sendToBack {
+                        animation: sendToBack 1s ease-in;
                     }
                     
                     .feature {
@@ -57,16 +110,7 @@
                         flex-direction: column;
                         position: absolute;
                         top: 100px;
-
-                        &:nth-child(2){
-                            transform: scale(1.03);
-                            opacity: 0.8;
-                        }
-
-                        &:nth-child(3){
-                            transform: scale(1.06);
-                            opacity: 0.6;
-                        }
+                        opacity: 0.6;
 
                         i {
     
@@ -84,6 +128,12 @@
                             text-align: center;
                         }
                         
+                    }
+                    
+                    .cardActive {
+                        opacity: 1;
+                        z-index: 999;
+                        transform: scale(1);
                     }
 
                     .dotWrapper {
@@ -128,6 +178,14 @@
                 &:hover {
                     opacity: 0.8;
                     text-shadow: $hover-shadow;
+                }
+                
+                @media only screen and (max-width: 1600px) {
+				  right: 50px;
+				}
+                
+                @media only screen and (max-width: 900px) {
+                  display: none;
                 }
 
             }

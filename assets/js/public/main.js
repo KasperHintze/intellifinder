@@ -3497,7 +3497,7 @@ exports.default = Main;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-			value: true
+                    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3516,51 +3516,94 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Tour = function (_Module) {
-			_inherits(Tour, _Module);
+                    _inherits(Tour, _Module);
 
-			function Tour() {
-						_classCallCheck(this, Tour);
+                    function Tour() {
+                                        _classCallCheck(this, Tour);
 
-						return _possibleConstructorReturn(this, (Tour.__proto__ || Object.getPrototypeOf(Tour)).apply(this, arguments));
-			}
+                                        return _possibleConstructorReturn(this, (Tour.__proto__ || Object.getPrototypeOf(Tour)).apply(this, arguments));
+                    }
 
-			_createClass(Tour, [{
-						key: 'ready',
-						value: function ready(app) {
+                    _createClass(Tour, [{
+                                        key: 'ready',
+                                        value: function ready(app) {
 
-									console.log('Loaded tour.js');
+                                                            console.log('Loaded tour.js');
 
-									/* Vars */
-									var featureCount = 0,
-									    i = 0;
+                                                            /* Vars */
+                                                            var featureCount = 0,
+                                                                i = 0,
+                                                                scale = 1.03;
 
-									$(document).ready(function () {
+                                                            $(document).ready(function () {
 
-												if ($(window).width() < 991) {
-															// Mindre end 991
-												} else {
-															// Do code
+                                                                                // Do code
 
-															if ($('.featureWrapper')[0]) {
+                                                                                if ($('.featureWrapper')[0]) {
 
-																		// Counting features
-																		$('.feature').each(function () {
-																					featureCount++;
-																		});
+                                                                                                    console.log('Running tour.js in all its glory');
 
-																		// Appending dots
-																		for (i = 0; i < featureCount; i++) {
-																					$(".dotWrapper").append("<div class='dot'></div>");
-																		}
+                                                                                                    // Counting features
+                                                                                                    $('.feature').each(function () {
 
-																		$(".dotWrapper .dot:first-child").addClass('dotActive');
-															}
-												}
-									});
-						}
-			}]);
+                                                                                                                        if (featureCount == 0) {
+                                                                                                                                            $(this).addClass('cardActive');
+                                                                                                                        } else {
+                                                                                                                                            $(this).css('transform', 'scale(' + scale + ')');
+                                                                                                                                            scale = scale + .03;
+                                                                                                                        }
 
-			return Tour;
+                                                                                                                        $(this).attr('data-id', featureCount);
+                                                                                                                        featureCount++;
+                                                                                                    });
+
+                                                                                                    // Appending dots
+                                                                                                    for (i = 0; i < featureCount; i++) {
+                                                                                                                        $(".dotWrapper").append("<div class='dot' data-id='" + i + "'></div>");
+                                                                                                    }
+                                                                                                    // Setting first dot to active
+                                                                                                    $(".dotWrapper .dot:first-child").addClass('dotActive');
+
+                                                                                                    $('.arrowRight').click(function () {
+
+                                                                                                                        // Getting ids
+                                                                                                                        var firstCard = parseInt($('.cardActive').attr('data-id'));
+
+                                                                                                                        console.log('firstCard = ' + firstCard);
+
+                                                                                                                        if (firstCard == featureCount - 1) {
+                                                                                                                                            var newCard = 0;
+                                                                                                                        } else {
+                                                                                                                                            var newCard = firstCard + 1;
+                                                                                                                        }
+
+                                                                                                                        // Sending card to back
+                                                                                                                        $('.cardActive').addClass('sendToBack');
+
+                                                                                                                        // Removing cardActive and aplying to new card
+                                                                                                                        setTimeout(function () {
+
+                                                                                                                                            console.log('newCard = ' + newCard);
+
+                                                                                                                                            $('.cardActive').insertAfter('.featureWrapper .feature:last-child');
+
+                                                                                                                                            $('.cardActive').attr('moved', '1');
+
+                                                                                                                                            $('.cardActive').removeClass('sendToBack');
+                                                                                                                                            $('.cardActive').removeClass('cardActive');
+
+                                                                                                                                            $('.feature[data-id=' + newCard + ']').addClass('cardActive');
+
+                                                                                                                                            $('.dotActive').removeClass('dotActive');
+                                                                                                                                            $('.dotWrapper .dot[data-id=' + newCard + ']').addClass('dotActive');
+                                                                                                                        }, 1000);
+                                                                                                    });
+                                                                                }
+                                                            });
+                                        }
+                    }]);
+
+                    return Tour;
 }(_wrapper.Module);
 
 exports.default = Tour;
