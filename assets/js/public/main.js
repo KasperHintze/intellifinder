@@ -3448,6 +3448,129 @@ return Promise;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"_process":54}],61:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+					value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wrapper = require('wrapper6');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var $ = jQuery;
+
+var Footer = function (_Module) {
+					_inherits(Footer, _Module);
+
+					function Footer() {
+										_classCallCheck(this, Footer);
+
+										return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+					}
+
+					_createClass(Footer, [{
+										key: 'ready',
+										value: function ready(app) {
+
+															console.log('Loaded footer.js');
+
+															/* Vars */
+															var toggleCard = 0;
+
+															//Set the same animation time as in the CSS animation.
+															var animationTime = 500;
+
+															$(document).ready(function () {
+
+																				// Do code
+
+																				console.log('Running footer.js in all its glory');
+
+																				//Clicking the arrows changes the cards placing.
+																				$('.fa-angle-left, .fa-angle-right').click(function () {
+
+																									if (toggleCard === 0) {
+
+																														$('.map').addClass('cardSwitchMap');
+																														$('.contact-details').removeClass('cardSwitchContact');
+
+																														//Time the z-index with the animation duration from SCSS.
+																														setTimeout(function () {
+
+																																			$('.contact-details').css('z-index', 50);
+																																			$('.map').css('z-index', 110);
+																														}, animationTime);
+
+																														toggleCard = 1;
+																									} else {
+
+																														$('.map').removeClass('cardSwitchMap');
+																														$('.contact-details').addClass('cardSwitchContact');
+
+																														//Time the z-index with the animation duration from SCSS.
+																														setTimeout(function () {
+
+																																			$('.contact-details').css('z-index', 110);
+																																			$('.map').css('z-index', 50);
+																														}, animationTime);
+
+																														toggleCard = 0;
+																									}
+																				});
+
+																				//Clicking on the actual card also changes the placing.
+																				$('.map, .contact-details').click(function () {
+
+																									var selectedCard = this.className;
+
+																									if (selectedCard === "footer-card map" && toggleCard === 0) {
+
+																														$('.map').addClass('cardSwitchMap');
+																														$('.contact-details').removeClass('cardSwitchContact');
+
+																														//Time the z-index with the animation duration from SCSS.
+																														setTimeout(function () {
+
+																																			$('.contact-details').css('z-index', 50);
+																																			$('.map').css('z-index', 110);
+																														}, animationTime);
+
+																														toggleCard = 1;
+																									} else if (selectedCard === "footer-card contact-details" && toggleCard === 1) {
+
+																														$('.map').removeClass('cardSwitchMap');
+																														$('.contact-details').addClass('cardSwitchContact');
+
+																														//Time the z-index with the animation duration from SCSS.
+																														setTimeout(function () {
+
+																																			$('.contact-details').css('z-index', 110);
+																																			$('.map').css('z-index', 50);
+																														}, animationTime);
+
+																														toggleCard = 0;
+																									}
+																				});
+															});
+										}
+					}]);
+
+					return Footer;
+}(_wrapper.Module);
+
+exports.default = Footer;
+
+},{"wrapper6":56}],62:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3493,7 +3616,7 @@ var Main = function (_Module) {
 
 exports.default = Main;
 
-},{"wrapper6":56}],62:[function(require,module,exports){
+},{"wrapper6":56}],63:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3608,7 +3731,7 @@ var Tour = function (_Module) {
 
 exports.default = Tour;
 
-},{"wrapper6":56}],63:[function(require,module,exports){
+},{"wrapper6":56}],64:[function(require,module,exports){
 "use strict";
 
 var _wrapper = require("wrapper6");
@@ -3620,6 +3743,10 @@ var _main2 = _interopRequireDefault(_main);
 var _tour = require("../_modules/tour.js");
 
 var _tour2 = _interopRequireDefault(_tour);
+
+var _footer = require("../_modules/footer.js");
+
+var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3641,9 +3768,10 @@ var app = window.app = new _wrapper.Application(window.options || {});
  ----------------------------------------------------------*/
 app.use(_main2.default);
 app.use(_tour2.default);
+app.use(_footer2.default);
 //import $ from "jquery";
 //window.jQuery = window.$ = $;
 
-},{"../_modules/main.js":61,"../_modules/tour.js":62,"wrapper6":56}]},{},[63]);
+},{"../_modules/footer.js":61,"../_modules/main.js":62,"../_modules/tour.js":63,"wrapper6":56}]},{},[64]);
 
 //# sourceMappingURL=main.js.map
