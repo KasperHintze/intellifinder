@@ -10,8 +10,10 @@ export default class Tour extends Module {
 
 		/* Vars */
 		var featureCount = 0,
+            imgCount = 0,
 			i = 0,
-            scale = 1.03;
+            scale = 1.03,
+            z = 5000;
 
 		$(document).ready(function(){
             
@@ -32,7 +34,28 @@ export default class Tour extends Module {
                     }
 
                     $(this).attr('data-id', featureCount);
+                    
+                    $(this).css('z-index', z);
+                    
                     featureCount++;
+                    
+                    z = z -100;
+                    
+                });
+               
+               // Counting images
+                $('.imgWrapper img').each(function(){
+                    
+                    console.log('Running');
+
+                    if(imgCount == 0){
+                        $(this).css('opacity', '1');
+                    }
+                    
+                    $(this).attr('data-id', imgCount);
+                    
+                    imgCount++;
+                    
                 });
 
                 // Appending dots
@@ -57,11 +80,15 @@ export default class Tour extends Module {
 
                     // Sending card to back
                     $('.cardActive').addClass('sendToBack');
+                    
+                    $('.feature[data-id='+newCard+']').css('opacity', '1');
 
                     // Removing cardActive and aplying to new card
                     setTimeout(function(){
 
                         console.log('newCard = '+newCard);
+                        
+                        // Card
 
                         $('.cardActive').insertAfter('.featureWrapper .feature:last-child');
 
@@ -71,9 +98,17 @@ export default class Tour extends Module {
                         $('.cardActive').removeClass('cardActive');
 
                         $('.feature[data-id='+newCard+']').addClass('cardActive');
-
+                        
+                        // Image
+                        $('.imgWrapper img[data-id='+firstCard+']').css('opacity', '0');
+                        
+                        $('.imgWrapper img[data-id='+newCard+']').css('opacity', '1');
+                        
+                        // Dot
                         $('.dotActive').removeClass('dotActive');
                         $('.dotWrapper .dot[data-id='+newCard+']').addClass('dotActive');
+                        
+                        sortCards();
 
 
                     }, 1000);
@@ -83,6 +118,22 @@ export default class Tour extends Module {
 			}
 
 		});
+        
+        function sortCards(){
+            
+            var index = 5000;
+            
+            $('.feature').each(function(){
+                
+                console.log('Running');
+
+                $(this).css('z-index', z);
+                    
+                index = index - 100;
+
+            });
+            
+        }
 
 	}
 }

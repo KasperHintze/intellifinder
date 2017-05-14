@@ -20,10 +20,18 @@
 				z-index: 50;
                 z-index: 9999;
                 
-                img {
-					width: 740px;
-					height: 590px;
-				}
+                .imgWrapper {
+                
+                    img {
+                        position: absolute;
+                        width: 740px;
+                        height: 590px;
+                        top: 30px;
+                        left: 30px;
+                        opacity: 0;
+                    }
+                    
+                }
                 
                 @media only screen and (max-width: 1600px) {
 				  left: -140px;
@@ -111,6 +119,7 @@
                         position: absolute;
                         top: 100px;
                         opacity: 0.6;
+                        transition: all 0.5s ease-in;
 
                         i {
     

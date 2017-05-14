@@ -3497,7 +3497,7 @@ exports.default = Main;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-                    value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3516,94 +3516,141 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Tour = function (_Module) {
-                    _inherits(Tour, _Module);
+    _inherits(Tour, _Module);
 
-                    function Tour() {
-                                        _classCallCheck(this, Tour);
+    function Tour() {
+        _classCallCheck(this, Tour);
 
-                                        return _possibleConstructorReturn(this, (Tour.__proto__ || Object.getPrototypeOf(Tour)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Tour.__proto__ || Object.getPrototypeOf(Tour)).apply(this, arguments));
+    }
+
+    _createClass(Tour, [{
+        key: 'ready',
+        value: function ready(app) {
+
+            console.log('Loaded tour.js');
+
+            /* Vars */
+            var featureCount = 0,
+                imgCount = 0,
+                i = 0,
+                scale = 1.03,
+                z = 5000;
+
+            $(document).ready(function () {
+
+                // Do code
+
+                if ($('.featureWrapper')[0]) {
+
+                    console.log('Running tour.js in all its glory');
+
+                    // Counting features
+                    $('.feature').each(function () {
+
+                        if (featureCount == 0) {
+                            $(this).addClass('cardActive');
+                        } else {
+                            $(this).css('transform', 'scale(' + scale + ')');
+                            scale = scale + .03;
+                        }
+
+                        $(this).attr('data-id', featureCount);
+
+                        $(this).css('z-index', z);
+
+                        featureCount++;
+
+                        z = z - 100;
+                    });
+
+                    // Counting images
+                    $('.imgWrapper img').each(function () {
+
+                        console.log('Running');
+
+                        if (imgCount == 0) {
+                            $(this).css('opacity', '1');
+                        }
+
+                        $(this).attr('data-id', imgCount);
+
+                        imgCount++;
+                    });
+
+                    // Appending dots
+                    for (i = 0; i < featureCount; i++) {
+                        $(".dotWrapper").append("<div class='dot' data-id='" + i + "'></div>");
                     }
+                    // Setting first dot to active
+                    $(".dotWrapper .dot:first-child").addClass('dotActive');
 
-                    _createClass(Tour, [{
-                                        key: 'ready',
-                                        value: function ready(app) {
+                    $('.arrowRight').click(function () {
 
-                                                            console.log('Loaded tour.js');
+                        // Getting ids
+                        var firstCard = parseInt($('.cardActive').attr('data-id'));
 
-                                                            /* Vars */
-                                                            var featureCount = 0,
-                                                                i = 0,
-                                                                scale = 1.03;
+                        console.log('firstCard = ' + firstCard);
 
-                                                            $(document).ready(function () {
+                        if (firstCard == featureCount - 1) {
+                            var newCard = 0;
+                        } else {
+                            var newCard = firstCard + 1;
+                        }
 
-                                                                                // Do code
+                        // Sending card to back
+                        $('.cardActive').addClass('sendToBack');
 
-                                                                                if ($('.featureWrapper')[0]) {
+                        $('.feature[data-id=' + newCard + ']').css('opacity', '1');
 
-                                                                                                    console.log('Running tour.js in all its glory');
+                        // Removing cardActive and aplying to new card
+                        setTimeout(function () {
 
-                                                                                                    // Counting features
-                                                                                                    $('.feature').each(function () {
+                            console.log('newCard = ' + newCard);
 
-                                                                                                                        if (featureCount == 0) {
-                                                                                                                                            $(this).addClass('cardActive');
-                                                                                                                        } else {
-                                                                                                                                            $(this).css('transform', 'scale(' + scale + ')');
-                                                                                                                                            scale = scale + .03;
-                                                                                                                        }
+                            // Card
 
-                                                                                                                        $(this).attr('data-id', featureCount);
-                                                                                                                        featureCount++;
-                                                                                                    });
+                            $('.cardActive').insertAfter('.featureWrapper .feature:last-child');
 
-                                                                                                    // Appending dots
-                                                                                                    for (i = 0; i < featureCount; i++) {
-                                                                                                                        $(".dotWrapper").append("<div class='dot' data-id='" + i + "'></div>");
-                                                                                                    }
-                                                                                                    // Setting first dot to active
-                                                                                                    $(".dotWrapper .dot:first-child").addClass('dotActive');
+                            $('.cardActive').attr('moved', '1');
 
-                                                                                                    $('.arrowRight').click(function () {
+                            $('.cardActive').removeClass('sendToBack');
+                            $('.cardActive').removeClass('cardActive');
 
-                                                                                                                        // Getting ids
-                                                                                                                        var firstCard = parseInt($('.cardActive').attr('data-id'));
+                            $('.feature[data-id=' + newCard + ']').addClass('cardActive');
 
-                                                                                                                        console.log('firstCard = ' + firstCard);
+                            // Image
+                            $('.imgWrapper img[data-id=' + firstCard + ']').css('opacity', '0');
 
-                                                                                                                        if (firstCard == featureCount - 1) {
-                                                                                                                                            var newCard = 0;
-                                                                                                                        } else {
-                                                                                                                                            var newCard = firstCard + 1;
-                                                                                                                        }
+                            $('.imgWrapper img[data-id=' + newCard + ']').css('opacity', '1');
 
-                                                                                                                        // Sending card to back
-                                                                                                                        $('.cardActive').addClass('sendToBack');
+                            // Dot
+                            $('.dotActive').removeClass('dotActive');
+                            $('.dotWrapper .dot[data-id=' + newCard + ']').addClass('dotActive');
 
-                                                                                                                        // Removing cardActive and aplying to new card
-                                                                                                                        setTimeout(function () {
+                            sortCards();
+                        }, 1000);
+                    });
+                }
+            });
 
-                                                                                                                                            console.log('newCard = ' + newCard);
+            function sortCards() {
 
-                                                                                                                                            $('.cardActive').insertAfter('.featureWrapper .feature:last-child');
+                var index = 5000;
 
-                                                                                                                                            $('.cardActive').attr('moved', '1');
+                $('.feature').each(function () {
 
-                                                                                                                                            $('.cardActive').removeClass('sendToBack');
-                                                                                                                                            $('.cardActive').removeClass('cardActive');
+                    console.log('Running');
 
-                                                                                                                                            $('.feature[data-id=' + newCard + ']').addClass('cardActive');
+                    $(this).css('z-index', z);
 
-                                                                                                                                            $('.dotActive').removeClass('dotActive');
-                                                                                                                                            $('.dotWrapper .dot[data-id=' + newCard + ']').addClass('dotActive');
-                                                                                                                        }, 1000);
-                                                                                                    });
-                                                                                }
-                                                            });
-                                        }
-                    }]);
+                    index = index - 100;
+                });
+            }
+        }
+    }]);
 
-                    return Tour;
+    return Tour;
 }(_wrapper.Module);
 
 exports.default = Tour;
