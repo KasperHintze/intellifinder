@@ -3,6 +3,7 @@ footer {
 	height: 550px;
 	background: #FFF;
 	padding-top:80px;
+	overflow:hidden;
 
 	.container{
 
@@ -88,6 +89,54 @@ footer {
 
 				}
 
+				@keyframes cardSwitchContact {
+					0% {
+
+					}
+
+					50% {
+						transform:translateY(-190px);
+
+					}
+
+					51% {
+						z-index: 110;
+					}
+
+					100% {
+						transform:translateY(0px);
+						z-index: 120;
+					}
+				}
+
+				@keyframes cardSwitchMap {
+					0% {
+
+					}
+
+					50% {
+						transform:translateY(180px);
+
+					}
+
+					51% {
+						z-index: 110;
+					}
+
+					100% {
+						transform:translateY(0px);
+						z-index: 120;
+					}
+				}
+
+				.cardSwitchContact {
+					animation: cardSwitchContact 0.5s ease-in-out;
+				}
+
+				.cardSwitchMap {
+					animation: cardSwitchMap 0.5s ease-in-out;
+				}
+
 				.footer-card{
 					position:relative;
 					height:211px;
@@ -110,6 +159,7 @@ footer {
 						margin-bottom:0;
 						font-size:14px;
 					}
+
 				}
 
 				.contact-details{
