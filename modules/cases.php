@@ -16,7 +16,7 @@
 
       <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="case-card">
             <div class="card-circle-outer"></div>
             <div class="card-circle-inner">
@@ -33,7 +33,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="case-card">
             <div class="card-circle-outer"></div>
             <div class="card-circle-inner">
@@ -53,7 +53,7 @@
       </div>
       <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="case-card">
             <div class="card-circle-outer"></div>
             <div class="card-circle-inner">
@@ -70,7 +70,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="case-card">
             <div class="card-circle-outer"></div>
             <div class="card-circle-inner">
