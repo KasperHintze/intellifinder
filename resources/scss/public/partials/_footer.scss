@@ -5,11 +5,25 @@ footer {
 	padding-top:80px;
 	overflow:hidden;
 
+	@media only screen and (max-width:1200px){
+
+		padding-top:20px;
+		height:auto;
+
+	}
+
 	.container{
 
 		.row{
 
-			.col-md-6{
+			.col-lg-6{
+
+				@media only screen and (max-width:1200px){
+
+					text-align:center;
+					margin-bottom:20px;
+
+				}
 
 				.fa-angle-left{
 					color: $text-color;
@@ -24,6 +38,24 @@ footer {
 
 					&:hover{
 						transform: translateY(-1px);
+					}
+
+					@media only screen and(max-width:1200px){
+
+						left: 120px;
+
+					}
+
+					@media only screen and(max-width:991px){
+
+						left: 60px;
+
+					}
+
+					@media only screen and(max-width:780px){
+
+						display:none;
+
 					}
 				}
 
@@ -41,6 +73,25 @@ footer {
 					&:hover{
 						transform: translateY(-1px);
 					}
+
+					@media only screen and(max-width:1200px){
+
+						right: 120px;
+
+					}
+
+					@media only screen and(max-width:991px){
+
+						right: 60px;
+
+					}
+
+					@media only screen and(max-width:780px){
+
+						display:none;
+
+					}
+
 				}
 
 				.location-img{
@@ -60,31 +111,31 @@ footer {
 						color:$text-color;
 					}
 
-					span{
-						display:inline-block;
-						height:55px;
-						width:55px;
-						box-shadow: $standard-shadow;
-						border-radius:50%;
-						margin-right:15px;
-						padding-left:15px;
-						padding-top:14px;
-						margin-top:30px;
-						transition: all 0.2s ease-in;
+					.sm-wrapper{
+						text-align:center;
 
-						&:hover{
-							transform: translateY(-1px);
-							box-shadow:$hover-shadow;
+						span{
+							display:inline-block;
+							height:55px;
+							width:55px;
+							box-shadow: $standard-shadow;
+							border-radius:50%;
+							margin-right:15px;
+							padding-top:14px;
+							margin-top:30px;
+							transition: all 0.2s ease-in;
+
+							&:hover{
+								transform: translateY(-1px);
+								box-shadow:$hover-shadow;
+							}
+
+							i{
+								color:$blue-font;
+								font-size:28px;
+							}
 						}
 
-						i{
-							color:$blue-font;
-							font-size:28px;
-						}
-
-						.fa-facebook{
-							padding-left:5px;
-						}
 					}
 
 				}
@@ -148,6 +199,7 @@ footer {
 					transition: all 0.2s ease-in;
 					cursor:pointer;
 					color:$text-color;
+					text-align:left;
 
 					&:hover{
 						transform: translateY(-1px);
@@ -166,6 +218,26 @@ footer {
 					position:relative;
 					z-index:100;
 					top:90px;
+
+					@media only screen and (max-width:1200px){
+
+						left:220px;
+
+					}
+
+					@media only screen and (max-width:991px){
+
+						left:110px;
+
+					}
+
+					@media only screen and(max-width:780px){
+
+						left:0;
+						margin:0 auto;
+
+					}
+
 					&::before{
 						content: "\f278";
 						font-family: "FontAwesome";
@@ -185,6 +257,26 @@ footer {
 					bottom:80px;
 					//Placeholder for google maps
 					background-image:url("../img/map.jpg");
+
+					@media only screen and(max-width:1200px){
+
+						left:250px;
+
+					}
+
+					@media only screen and(max-width:991px){
+
+						left:150px;
+
+					}
+
+					@media only screen and(max-width:780px){
+
+						left:0;
+						margin:0 auto;
+						margin-top:200px;
+
+					}
 				}
 			}
 		}
