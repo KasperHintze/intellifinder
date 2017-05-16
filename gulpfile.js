@@ -1,6 +1,6 @@
 // DISABLE NOTIFICATIONS
 process.env.DISABLE_NOTIFIER = true;
-var sassInput = './resources/scss/public/**/*.scss',
+var sassInput = './resources/scss/public/**/**/*.scss',
 	sassOutput = './assets/css/',
 	scriptsInputFolder = './resources/js/',
 	scriptsInput = scriptsInputFolder + '**/*.js',
