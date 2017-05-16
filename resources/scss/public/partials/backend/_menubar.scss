@@ -1,0 +1,44 @@
+#menuBar {
+	width: 335px;
+	height: calc(100vh - 70px);
+	background: #FFF;
+	z-index: 1;
+	padding: 60px;
+
+
+	.addNews {
+		background: $primary-green;
+		border: 1px solid darken($primary-green, 10%);
+		color: #FFF;
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+		text-decoration: none;
+		float: left;
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: 17px;
+		font-weight: bold;
+		transition: all 0.2s ease-in;
+		border-radius: 3px;
+		@include rgba-shadow(0 3px 12px, $primary-green, 0.5);
+
+		&:hover {
+			background: lighten($primary-green, 5%);
+			@include rgba-shadow(0 3px 20px, $primary-green, 0.7);
+		}
+	}
+
+	ul {
+		float: left;
+		width: 100%;
+		li {
+			list-style: none;
+			a {
+				float: left;
+				width: 100%;
+				text-decoration: none;
+			}
+		}
+	}
+}
