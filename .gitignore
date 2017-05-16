@@ -2,6 +2,9 @@
 ## Style.css ignore ##
 assets/css/
 
+## Gulpfile ##
+gulpfile.js
+
 ### Git ###
 *.orig
 

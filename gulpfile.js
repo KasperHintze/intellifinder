@@ -85,7 +85,7 @@ elixir(function (mix) {
 		mix.browserify('./' + script, scriptsOutput + filename);
 	});
     browserSync.init({
-         proxy: 'localhost/intellifinder'
+         proxy: 'localhost:8888/intellifinder'
     });
     
     console.log('');
