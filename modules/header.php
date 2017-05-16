@@ -6,14 +6,9 @@
     <span></span>
   </div>
   <div class="container">
-    <nav>
-      <a href="<?php echo $prefix; ?>index.php"><img class="noselect" src="<?php echo $prefix; ?>assets/img/logo.svg"></a>
-      <ul>
-        <li><a class="noselect" href="#">CASES</a></li>
-        <li><a class="noselect" href="#">ABOUT US</a></li>
-        <li><a class="noselect" href="#">CONTACT</a></li>
-      </ul>
-    </nav>
+
+    <?php include 'menu.php' ?>
+
     <div class="row">
       <div class="col-md-7">
         <h1>IntelliFinder ID + can be used by everyone</h1>

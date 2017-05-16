@@ -1,0 +1,36 @@
+.news-info{
+
+    .container{
+
+        .back-text{
+
+            color:#fff;
+            font-weight:300;
+            margin-top:60px;
+            margin-left:0px;
+            i{
+                margin-right:5px;
+            }
+        }
+
+        .row{
+
+            .col-lg-8{
+
+                .featured-news{
+
+                    height:904px;
+                    margin-top:57px;
+                    background-color:#fff;
+                    border-radius:3px;
+                    box-shadow: $standard-shadow;
+                }
+            }
+
+            .col-lg-4{
+
+
+            }
+        }
+    }
+}
