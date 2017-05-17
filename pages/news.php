@@ -9,7 +9,7 @@ $title = 'News | Intellifinder';
     <head>
         <?php include_once($prefix.'includes/header.php'); ?>
     </head>
-<body>
+<body class="news-body">
 
 <!-- Header section (Gradient) -->
 <?php include_once($prefix.'modules/sub-header.php'); ?>

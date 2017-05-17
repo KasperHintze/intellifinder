@@ -94,7 +94,7 @@
                 height: 280px;
                 width: 270px;
                 top: -10px;
-              background-color: rgba(250, 166, 26, 0.1);
+              @include rgba-bg($primary-orange, 0.1);
               border-radius:50%;
             }
 
@@ -104,7 +104,7 @@
               left:-27px;
               height:145px;
               width:145px;
-              background: $lighter-orange;
+              background: lighten($primary-orange, 20%);
               border-radius:50%;
 
               i{

@@ -1,5 +1,5 @@
 <header>
-    <div class="header-background">
+    <div class="header-background sub-page-background">
         <span></span>
         <span></span>
         <span></span>
