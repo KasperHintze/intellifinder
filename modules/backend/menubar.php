@@ -1,11 +1,10 @@
 <div id="menuBar">
 
-	<a class="addNews" href="<?php echo $prefix; ?>code/code_logout.php">Add news</a>
+	<a class="addNews" href="<?php echo $prefix; ?>admin/pages/add_news.php">Add news</a>
 
 	<ul>
-		<li><a>All news</a></li>
-		<li><a>Edit news</a></li>
-		<li><a>Delete news</a></li>
+		<li><a class="<?php if($site == 'news'){echo 'menuActive';} ?>" href="<?php echo $prefix; ?>admin/index.php">News</a></li>
+		<li><a class="<?php if($site == 'page'){echo 'menuActive';} ?>" href="<?php echo $prefix; ?>admin/pages/page.php">Page</a></li>
 	</ul>
 
 

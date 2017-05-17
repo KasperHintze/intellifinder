@@ -4,9 +4,9 @@ session_start();
 
 if(isset($_SESSION['username'])){
 
-$prefix = '../';
-$title = 'News | Intellifinder';
-$site = 'news';
+$prefix = '../../';
+$title = 'Page | Intellifinder';
+$site = 'page';
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ $site = 'news';
 <?php include_once($prefix.'modules/backend/menubar.php'); ?>
 
 <!-- MenuBar -->
-<?php include_once($prefix.'modules/backend/all_news.php'); ?>
+<?php include_once($prefix.'modules/backend/page.php'); ?>
 
 </body>
 </html>

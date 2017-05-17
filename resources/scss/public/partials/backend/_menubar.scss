@@ -4,6 +4,8 @@
 	background: #FFF;
 	z-index: 1;
 	padding: 60px;
+	position: fixed;
+	top: 70px;
 
 
 	.addNews {
@@ -26,6 +28,8 @@
 		&:hover {
 			background: lighten($primary-green, 5%);
 			@include rgba-shadow(0 3px 20px, $primary-green, 0.7);
+			cursor: pointer;
+			transform: translateY(-2px);
 		}
 	}
 
@@ -34,10 +38,21 @@
 		width: 100%;
 		li {
 			list-style: none;
+			float: left;
+			width: 100%;
 			a {
 				float: left;
-				width: 100%;
 				text-decoration: none;
+				cursor: pointer;
+				color: $text-color;
+				transition: all 0.2s ease-in;
+
+				&:hover {
+					color: #32325d;
+				}
+			}
+			.menuActive {
+				color: $primary-orange;
 			}
 		}
 	}

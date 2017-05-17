@@ -1,15 +1,18 @@
 #topBar {
 	width: 100%;
 	height: 70px;
-	box-shadow: $standard-shadow;
+	box-shadow: $backend-shadow;
 	background: #FFF;
 	z-index: 100;
+	position: fixed;
 
 	a {
 		img {
 			width: auto;
-			height: 40px;
+			height: 30px;
 			margin-top: 20px;
+			margin-left: 40px;
+			cursor: pointer;
 		}
 	}
 
@@ -25,9 +28,9 @@
 		background: $primary-moron;
 		color: #FFF;
 		border-radius: 3px;
-		box-shadow: $standard-shadow;
+		@include rgba-shadow(0 3px 12px, $primary-moron, 0.5);
 		border: 1px solid darken($primary-moron, 10%);
-		margin-right: 50px;
+		margin-right: 40px;
 		height: 50px; 
 		margin-top: 10px;
 		text-decoration: none;
@@ -38,6 +41,8 @@
 
 		&:hover {
 			background: lighten($primary-moron, 5%);
+			@include rgba-shadow(0 3px 20px, $primary-moron, 0.8);
+			cursor: pointer;
 		}
 	}
 }

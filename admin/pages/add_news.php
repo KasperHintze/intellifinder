@@ -4,8 +4,8 @@ session_start();
 
 if(isset($_SESSION['username'])){
 
-$prefix = '../';
-$title = 'News | Intellifinder';
+$prefix = '../../';
+$title = 'Add news | Intellifinder';
 $site = 'news';
 
 ?>
@@ -13,6 +13,15 @@ $site = 'news';
 <html>
     <head>
         <?php include_once($prefix.'includes/header.php'); ?>
+        <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=qc6708seu9rkh7cahr9qkwtnq3qwus0dma0zy4dafilsyb9k"></script>
+  		<script>
+
+  			tinyMCE.init({
+			    // General options
+			    mode : "textareas"
+			});
+
+  		</script>
     </head>
 <body class="dashboard">
 
@@ -22,8 +31,8 @@ $site = 'news';
 <!-- MenuBar -->
 <?php include_once($prefix.'modules/backend/menubar.php'); ?>
 
-<!-- MenuBar -->
-<?php include_once($prefix.'modules/backend/all_news.php'); ?>
+<!-- Add News -->
+<?php include_once($prefix.'modules/backend/add_news.php'); ?>
 
 </body>
 </html>

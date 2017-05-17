@@ -15,10 +15,12 @@ var app = window.app = new Application(window.options || {});
 import Main from "../_modules/main.js";
 import Tour from "../_modules/tour.js";
 import Footer from "../_modules/footer.js";
+import News from "../_modules/news.js";
 /* Register modules
  ----------------------------------------------------------*/
 app.use(Main);
 app.use(Tour);
 app.use(Footer);
+app.use(News);
 //import $ from "jquery";
 //window.jQuery = window.$ = $;
