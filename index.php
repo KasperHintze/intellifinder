@@ -2,6 +2,7 @@
 
 $prefix = '';
 $title = 'Intellifinder';
+$frontpage = true;
 
 ?>
 <!DOCTYPE html>
