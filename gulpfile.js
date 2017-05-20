@@ -1,6 +1,6 @@
 // DISABLE NOTIFICATIONS
 process.env.DISABLE_NOTIFIER = true;
-var sassInput = './resources/scss/public/**/*.scss',
+var sassInput = './resources/scss/public/**/**/*.scss',
 	sassOutput = './assets/css/',
 	scriptsInputFolder = './resources/js/',
 	scriptsInput = scriptsInputFolder + '**/*.js',
@@ -68,13 +68,13 @@ gulp.watch('**/*.php').on('change', function () {
 });
 
 elixir(function (mix) {
-    
+
     console.log('');
     console.log('-----------------------------');
     console.log('### Beginning gulp watch ###');
     console.log('-----------------------------');
     console.log('');
-    
+
     livereload.listen();
 	mix.sass(sassInput, sassOutput);
 	var scripts = getScripts(scriptsInputFolder);
@@ -85,13 +85,14 @@ elixir(function (mix) {
 		mix.browserify('./' + script, scriptsOutput + filename);
 	});
     browserSync.init({
-         proxy: 'localhost/intellifinder'
+         proxy: 'localhost:8888/intellifinder',
+				 online: true
     });
-    
+
     console.log('');
     console.log('-----------------------------');
     console.log('### Done compiling ###');
     console.log('-----------------------------');
     console.log('');
-    
+
 });

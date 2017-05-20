@@ -1,12 +1,25 @@
 #cases{
     position:relative;
-    height:1500px;
+    height:1340px;
     background: $graytone-background;
     transform:skewY(-9deg);
     transform-origin:0;
     margin-top:270px;
     padding-top:120px;
     text-align:center;
+
+    @media only screen and (max-width:1200px){
+
+        height:1930px;
+
+    }
+
+    @media only screen and (max-width:750px){
+
+        height:auto;
+        padding-bottom:320px;
+
+    }
 
     .container{
       transform:skewY(9deg);
@@ -33,10 +46,18 @@
         padding-left:145px;
         padding-right:145px;
         margin-bottom:100px;
+
+        @media only screen and (max-width:750px){
+
+            padding-left:5px;
+            padding-right:5px;
+
+        }
+
       }
       .row{
 
-        .col-md-6{
+        .col-lg-6{
 
           .case-card{
             position:relative;
@@ -49,6 +70,19 @@
             transition: all 0.2s ease-in;
             backface-visibility: hidden;
 
+            @media only screen and (max-width:1200px){
+
+                margin-left:auto;
+                margin-right:auto;
+
+            }
+
+            @media only screen and (max-width:620px){
+
+                width:100%;
+
+            }
+
             &:hover{
                 transform: translateY(-1px);
                 box-shadow:$hover-shadow;
@@ -60,7 +94,7 @@
                 height: 280px;
                 width: 270px;
                 top: -10px;
-              background-color: rgba(250, 166, 26, 0.1);
+              @include rgba-bg($primary-orange, 0.1);
               border-radius:50%;
             }
 
@@ -70,7 +104,7 @@
               left:-27px;
               height:145px;
               width:145px;
-              background: $lighter-orange;
+              background: lighten($primary-orange, 20%);
               border-radius:50%;
 
               i{
@@ -85,6 +119,19 @@
               text-align:left;
               width:430px;
               padding-top:50px;
+
+              @media only screen and (max-width:620px){
+
+                  width:320px;
+                  padding-top:35px;
+
+              }
+
+              @media only screen and (max-width:515px){
+
+                width:65%;
+
+              }
 
               h3{
                 color: $text-color;

@@ -10,6 +10,7 @@ export default class Footer extends Module {
 
 		/* Vars */
         var toggleCard = 0;
+		var windowWidth = $(window).width();
 
 		//Set the same animation time as in the CSS animation.
 		var	animationTime = 500;
@@ -19,6 +20,16 @@ export default class Footer extends Module {
            // Do code
 
 		   console.log('Running footer.js in all its glory');
+
+		   // Get the window size on resize.
+		   // This is used for de-activating the click events below
+		   // under a certain screen size.
+		   
+		   	$(window).on('resize', function(event){
+
+				windowWidth = $(window).width();
+
+			});
 
 		   	//Clicking the arrows changes the cards placing.
                $('.fa-angle-left, .fa-angle-right').click(function(){
@@ -54,7 +65,6 @@ export default class Footer extends Module {
 
 					  toggleCard = 0;
 
-
 				  }
 
                });
@@ -64,7 +74,7 @@ export default class Footer extends Module {
 
 				var selectedCard = this.className;
 
-				if (selectedCard === "footer-card map" && toggleCard === 0) {
+				if (selectedCard === "footer-card map" && toggleCard === 0 && windowWidth > 780) {
 
 					$('.map').addClass('cardSwitchMap');
 					$('.contact-details').removeClass('cardSwitchContact');
@@ -80,7 +90,7 @@ export default class Footer extends Module {
 					toggleCard = 1;
 
 
-				} else if (selectedCard === "footer-card contact-details" && toggleCard === 1) {
+				} else if (selectedCard === "footer-card contact-details" && toggleCard === 1 && windowWidth > 780) {
 
 					$('.map').removeClass('cardSwitchMap');
 					$('.contact-details').addClass('cardSwitchContact');

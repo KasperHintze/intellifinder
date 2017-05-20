@@ -3486,6 +3486,7 @@ var Footer = function (_Module) {
 
 															/* Vars */
 															var toggleCard = 0;
+															var windowWidth = $(window).width();
 
 															//Set the same animation time as in the CSS animation.
 															var animationTime = 500;
@@ -3495,6 +3496,15 @@ var Footer = function (_Module) {
 																				// Do code
 
 																				console.log('Running footer.js in all its glory');
+
+																				// Get the window size on resize.
+																				// This is used for de-activating the click events below
+																				// under a certain screen size.
+
+																				$(window).on('resize', function (event) {
+
+																									windowWidth = $(window).width();
+																				});
 
 																				//Clicking the arrows changes the cards placing.
 																				$('.fa-angle-left, .fa-angle-right').click(function () {
@@ -3533,7 +3543,7 @@ var Footer = function (_Module) {
 
 																									var selectedCard = this.className;
 
-																									if (selectedCard === "footer-card map" && toggleCard === 0) {
+																									if (selectedCard === "footer-card map" && toggleCard === 0 && windowWidth > 780) {
 
 																														$('.map').addClass('cardSwitchMap');
 																														$('.contact-details').removeClass('cardSwitchContact');
@@ -3546,7 +3556,7 @@ var Footer = function (_Module) {
 																														}, animationTime);
 
 																														toggleCard = 1;
-																									} else if (selectedCard === "footer-card contact-details" && toggleCard === 1) {
+																									} else if (selectedCard === "footer-card contact-details" && toggleCard === 1 && windowWidth > 780) {
 
 																														$('.map').removeClass('cardSwitchMap');
 																														$('.contact-details').addClass('cardSwitchContact');
@@ -3617,6 +3627,67 @@ var Main = function (_Module) {
 exports.default = Main;
 
 },{"wrapper6":56}],63:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wrapper = require('wrapper6');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var $ = jQuery;
+
+var News = function (_Module) {
+	_inherits(News, _Module);
+
+	function News() {
+		_classCallCheck(this, News);
+
+		return _possibleConstructorReturn(this, (News.__proto__ || Object.getPrototypeOf(News)).apply(this, arguments));
+	}
+
+	_createClass(News, [{
+		key: 'ready',
+		value: function ready(app) {
+
+			$(document).ready(function () {
+				console.log('Loaded news.js');
+			});
+
+			$('#newsForm').submit(function () {
+				$(this).tinymce().save();
+				$.ajax({
+					type: 'POST',
+					url: $(this).attr('action'),
+					data: $(this).serialize(),
+					success: function success(data) {
+						$('#result').fadeIn('slow');
+						$('#result').html(data);
+						$('.loading').hide();
+					}
+				});
+				return false;
+			});
+		}
+	}]);
+
+	return News;
+}(_wrapper.Module);
+
+exports.default = News;
+
+},{"wrapper6":56}],64:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3778,7 +3849,7 @@ var Tour = function (_Module) {
 
 exports.default = Tour;
 
-},{"wrapper6":56}],64:[function(require,module,exports){
+},{"wrapper6":56}],65:[function(require,module,exports){
 "use strict";
 
 var _wrapper = require("wrapper6");
@@ -3794,6 +3865,10 @@ var _tour2 = _interopRequireDefault(_tour);
 var _footer = require("../_modules/footer.js");
 
 var _footer2 = _interopRequireDefault(_footer);
+
+var _news = require("../_modules/news.js");
+
+var _news2 = _interopRequireDefault(_news);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3816,9 +3891,10 @@ var app = window.app = new _wrapper.Application(window.options || {});
 app.use(_main2.default);
 app.use(_tour2.default);
 app.use(_footer2.default);
+app.use(_news2.default);
 //import $ from "jquery";
 //window.jQuery = window.$ = $;
 
-},{"../_modules/footer.js":61,"../_modules/main.js":62,"../_modules/tour.js":63,"wrapper6":56}]},{},[64]);
+},{"../_modules/footer.js":61,"../_modules/main.js":62,"../_modules/news.js":63,"../_modules/tour.js":64,"wrapper6":56}]},{},[65]);
 
 //# sourceMappingURL=main.js.map

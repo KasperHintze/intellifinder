@@ -1,5 +1,5 @@
 <section id="intro">
-	
+
 	<div class="container">
 
      	<div class="row">
@@ -17,17 +17,14 @@
 
 				</div>
 
-				<p class="text-align-right">We believe that payments is a problem rooted in code 
-				not finance. We obsessively seek out elegant, composable
-				abstractions that enable robust, scalable, flexible integrations.
-				Because we eliminate needless complexity and extraneous
-				details, you can get up and running with Stripe in just a
-				couple of minutes.We believe that payments is a problem
-				rooted in code, not finance. We obsessively seek out elegant,
-				composable abstractions that enable robust, scalable, flexible
-				integrations. Because we eliminate needless complexity and
-				extraneous details, you can get up and running with Stripe in
-				just a couple of minutes.</p>
+				<p class="text-align-right">IntelliFinder started in the field 10 years ago. Our software solution was
+				requested by the contractors working on developing fiber optics infrastructure.
+				We’ve been developing IntelliFinder constantly ever since, answering directly to our customers’ needs,
+				to make it your best working tool.
+				<br><br>
+				IntelliFinder is your dependable assistant for working smart in the field.
+				</p>
+
 
 				<a href="#cases">Discover how businesses use IntelliFinder</a>
 

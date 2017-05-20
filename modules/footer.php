@@ -2,7 +2,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-lg-6">
 
 				<img class="location-img" src="<?php echo $prefix; ?>assets/img/locationPointer.svg">
 
@@ -11,14 +11,18 @@
 					<h2>Ready to get in touch?</h2>
 					<p>- Write an e-mail or give us a call</p>
 
-					<span><i class="fa fa-facebook"></i></span>
-					<span><i class="fa fa-instagram"></i></span>
-					<span><i class="fa fa-twitter"></i></span>
+				<div class="sm-wrapper">
+
+					<a href="https://www.facebook.com/intellifinder.dk/" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
+					<a href="https://www.linkedin.com/feed/" target="_blank"><span><i class="fa fa-linkedin"></i></span></a>
+					<a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a>
+
+				</div>
 
 				</div>
 
 			</div>
-			<div class="col-md-6">
+			<div class="col-lg-6">
 
 				<i class="fa fa-angle-left"></i>
 
