@@ -3733,7 +3733,7 @@ var Tour = function (_Module) {
 
                             // Card
 
-                            $('.cardActive').insertAfter('.featureWrapper .feature:last-child');
+                            $('.cardActive').insertAfter('.featureWrapper .feature').last();
 
                             $('.cardActive').attr('moved', '1');
 
@@ -3765,7 +3765,7 @@ var Tour = function (_Module) {
 
                     console.log('Running');
 
-                    $(this).css('z-index', z);
+                    $(this).css('z-index', index);
 
                     index = index - 100;
                 });

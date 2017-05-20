@@ -90,8 +90,8 @@ export default class Tour extends Module {
                         
                         // Card
 
-                        $('.cardActive').insertAfter('.featureWrapper .feature:last-child');
-
+                        $('.cardActive').insertAfter('.featureWrapper .feature').last();
+                        
                         $('.cardActive').attr('moved', '1');
 
                         $('.cardActive').removeClass('sendToBack');
@@ -127,7 +127,7 @@ export default class Tour extends Module {
                 
                 console.log('Running');
 
-                $(this).css('z-index', z);
+                $(this).css('z-index', index);
                     
                 index = index - 100;
 
