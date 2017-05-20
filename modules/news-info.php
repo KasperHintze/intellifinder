@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <p class="back-text"><a href=""><i class="fa fa-angle-left"></i>Back to all news</a></p>
+        <p class="back-text"><a href="news.php"><i class="fa fa-angle-left"></i>Back to all news</a></p>
     
         <div class="row">
         
@@ -12,81 +12,138 @@
 
                     <div class="img-wrapper">
 
-                        <img src="<?php echo $prefix; ?>assets/img/newsplaceholder.jpg">
+                        <img src="<?php echo $prefix; ?>assets/img/uploaded/news/<?php echo $obj->img; ?>">
 
-                        <h1>BaneDanmark optimizes their workflow with IntelliFinder +</h1>
+                        <h1><?php echo $obj->title; ?></h1>
 
                     </div>
 
                     <div class="news-content">
+                        
+                        <p><?php echo $obj->des; ?></p>
 
-                        <p>
+                        <?php echo $obj->text; ?>
 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Donec mattis sapien vel rhoncus semper. Donec porta blandit fermentum. 
-                            Donec cursus metus felis, vitae pharetra tellus sodales ac. 
-                            Nulla non turpis ac justo viverra consequat. 
-                            Sed tempor vel ligula ac condimentum. 
-                            <br><br>
-                            Nullam eget nibh ut nisl consequat tristique vel ut augue. 
-                            Donec ullamcorper magna nec ante mollis, eu mattis magna scelerisque. 
-                            Etiam nec ultricies neque. Nunc id est nec odio maximus porta rutrum ut elit. 
-                            Donec id nulla tempus, ullamcorper ligula sed, fringilla tortor. 
-                            Maecenas urna velit, porta tristique sodales lobortis, tempor nec mi. 
-                            Nunc sed dui lacinia tortor hendrerit egestas. 
-                            Nunc sagittis orci vulputate ligula mattis facilisis.
-                            <br><br>
-                            Aliquam suscipit elementum lorem, eget pharetra elit dictum rutrum. 
-                            Duis quis dolor sed nibh faucibus viverra ut nec enim. 
-                            Quisque augue dui, finibus et purus non, suscipit dapibus elit.
-
-                        </p>
-
-                        <p class="date">25 April 2017</p>
+                        <p class="date"><?php echo $obj->dat; ?></p>
 
                     </div>
 
                 </div>
             
             </div>
+            
+            <?php
+
+            $nextId = $_GET['id']+1;
+
+            $crud2 = new Crud($objCon, "intelli_news");
+
+            $crud2->SetArray("*");
+
+            $cruds2 = $crud2->Select('WHERE id = '.$nextId);
+
+            $res2 = $crud2->SendSQL();
+
+            $obj2 = $res2->fetch_object();
+
+            ?>
 
             <div class="col-md-4">
+                
+                <?php
 
-                <a href>
+                if (mysqli_num_rows($res2)==0) {
+                    
+                    $newId = $_GET['id']-1;
 
-                <div class="next-news-container">
+                    $crud3 = new Crud($objCon, "intelli_news");
 
-                    <p class="next-article-tag">Next article<i class="fa fa-angle-right"></i></p>
+                    $crud3->SetArray("*");
 
-                    <div class="next-news-img-wrapper">
+                    $cruds3 = $crud3->Select('WHERE id = '.$newId);
 
-                        <img src="<?php echo $prefix; ?>assets/img/shoppingstock.jpg">
+                    $res3 = $crud3->SendSQL();
 
-                        <div class="text-box">
+                    $obj3 = $res3->fetch_object();
+                    ?>
+                <a href="news_single.php?id=<?php echo $obj3->id; ?>">
 
-                            <h4>New shopping center opened</h4>
-                            <p>Read more</p>
+                    <div class="next-news-container">
+
+                        <p class="next-article-tag">Next article<i class="fa fa-angle-right"></i></p>
+
+                        <div class="next-news-img-wrapper">
+
+                            <img src="<?php echo $prefix; ?>assets/img/uploaded/news/<?php echo $obj3->img; ?>">
+
+                            <div class="text-box">
+
+                                <h4><?php echo $obj3->title; ?></h4>
+                                <p>Read more</p>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                </div>
+                    </a>
+                <?php 
+                    
+                }else {
+                    ?>
+                <a href="news_single.php?id=<?php echo $obj2->id; ?>">
 
-                </a>
+                    <div class="next-news-container">
+
+                        <p class="next-article-tag">Next article<i class="fa fa-angle-right"></i></p>
+
+                        <div class="next-news-img-wrapper">
+
+                            <img src="<?php echo $prefix; ?>assets/img/uploaded/news/<?php echo $obj2->img; ?>">
+
+                            <div class="text-box">
+
+                                <h4><?php echo $obj2->title; ?></h4>
+                                <p>Read more</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    </a>
+                    <?php
+                }
+
+                ?>
 
                 <div class="news-list">
 
                     <h2>Latest news:</h2>
 
                     <ul>
+                        
+                        <?php
 
-                        <li><a href><p>IntelliFinder+ goes global<span>25 April 2017</span></p></a></li>
-                        <li><a href><p>Vestas is back on Mars<span>25 April 2017</span></p></a></li>
-                        <li><a href><p>SAS Airlines goes bankrobt<span>25 April 2017</span></p></a></li>
-                        <li><a href><p>Fynsk Erhverv got ripped off<span>25 April 2017</span></p></a></li>
-                        <li><a href><p>Fynsk Erhverv got ripped off<span>25 April 2017</span></p></a></li>
-                        <li><a href><p>Fynsk Erhverv got ripped off<span>25 April 2017</span></p></a></li>
+                        $crud4 = new Crud($objCon, "intelli_news");
+
+                        $crud4->SetArray("*");
+
+                        $cruds4 = $crud4->Select('ORDER BY id DESC LIMIT 10');
+
+                        $res4 = $crud4->SendSQL();
+
+                        while($obj4 = $res4->fetch_object()){
+                            
+                            ?>
+                                <li><a href="news_single.php?id=<?php echo $obj4->id; ?>"><p><?php echo $obj4->title; ?><span><?php echo $obj4->dat; ?></span></p></a></li>
+                            <?php
+                            
+                        }
+
+                        ?>
                     
                     </ul>
                     

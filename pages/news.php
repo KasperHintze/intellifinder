@@ -14,8 +14,8 @@ $title = 'News | Intellifinder';
 <!-- Header section (Gradient) -->
 <?php include_once($prefix.'modules/sub-header.php'); ?>
 
-<!-- News Info -->
-<?php include_once($prefix.'modules/news-info.php'); ?>
+<!-- Grid news -->
+<?php include_once($prefix.'modules/news.php'); ?>
 
 <!-- Footer -->
 <?php include_once($prefix.'modules/footer.php'); ?>

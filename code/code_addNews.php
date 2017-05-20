@@ -30,7 +30,7 @@
 
     $crud->SendSQL();
     
-    header("location: ../admin/index.php?news=created");
+    //header("location: ../admin/index.php?news=created");
 
            
 ?> 
