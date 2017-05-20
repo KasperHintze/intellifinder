@@ -1,3 +1,16 @@
+<?php
+
+$crud = new Crud($objCon, "intelli_page");
+                
+$crud->SetArray("*");
+
+$cruds = $crud->Select("WHERE des = 'intro'");
+
+$res = $crud->SendSQL();
+
+$obj = $res->fetch_object();
+
+?>
 <section id="intro">
 
 	<div class="container">
@@ -13,17 +26,11 @@
 						<div class="pulser"></div>
 					</div>
 
-					<h2 class="text-align-right">The complete app for <br>intelligent business</h2>
+					<h2 class="text-align-right"><?php echo $obj->title; ?></h2>
 
 				</div>
 
-				<p class="text-align-right">IntelliFinder started in the field 10 years ago. Our software solution was
-				requested by the contractors working on developing fiber optics infrastructure.
-				We’ve been developing IntelliFinder constantly ever since, answering directly to our customers’ needs,
-				to make it your best working tool.
-				<br><br>
-				IntelliFinder is your dependable assistant for working smart in the field.
-				</p>
+				<p class="text-align-right"><?php echo $obj->text; ?></p>
 
 
 				<a href="#cases">Discover how businesses use IntelliFinder</a>

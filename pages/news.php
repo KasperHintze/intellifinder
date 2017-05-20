@@ -3,6 +3,8 @@
 $prefix = '../';
 $title = 'News | Intellifinder';
 
+include_once($prefix.'code/incl_db.php');
+
 ?>
 <!DOCTYPE html>
 <html>

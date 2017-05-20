@@ -1,3 +1,16 @@
+<?php
+
+$crud = new Crud($objCon, "intelli_page");
+                
+$crud->SetArray("*");
+
+$cruds = $crud->Select("WHERE des = 'cases'");
+
+$res = $crud->SendSQL();
+
+$obj = $res->fetch_object();
+
+?>
 <section id="cases">
   <div class="container">
 
@@ -8,10 +21,8 @@
         <div class="pulser"></div>
     </div>
 
-    <h2>CUSTOMER CASES</h2>
-    <p>We will help you find the way to save your company’s time and money by using IntelliFinder system.
-    See what some of our users have to say about IntelliFinder + and discover how they have used IntelliFinder +
-    to help them with their business needs.
+    <h2><?php echo $obj->title; ?></h2>
+    <p><?php echo $obj->text; ?>
     </p>
 
       <div class="row">

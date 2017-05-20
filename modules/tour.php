@@ -1,3 +1,16 @@
+<?php
+
+$crud = new Crud($objCon, "intelli_page");
+                
+$crud->SetArray("*");
+
+$cruds = $crud->Select("WHERE des = 'tour'");
+
+$res = $crud->SendSQL();
+
+$obj = $res->fetch_object();
+
+?>
 <section id="tour">
     
     <div class="container">
@@ -24,7 +37,9 @@
 
 	     		<div class="featureWrapper">
 
-	     			<h3>Take a tour of our IntelliFinder app</h3>
+	     			<h3><?php echo $obj->title; ?></h3>
+                    
+                    <p><?php echo $obj->text; ?></p>
 	     		    
                     <div class="feature">
 

@@ -3893,10 +3893,9 @@ var NewsGrid = function (_Module) {
                                                                                                     });
                                                                                 };
 
-                                                                                //Her har jeg lavet et array box
                                                                                 var boxes = [];
 
-                                                                                // Her henter jeg nyheder og putter i arrayet
+                                                                                // Her henter jeg nyheder og putter i arrayet "boxes"
                                                                                 $.ajax({
 
                                                                                                     url: "../code/code_getNews.php",
