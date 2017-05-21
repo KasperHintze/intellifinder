@@ -125,6 +125,12 @@ header{
                     border-radius:3px;
                     transition: all 0.2s ease-in;
 
+                    @media only screen and (max-width:991px){
+
+                        display:none;
+
+                    }
+
                           &:hover {
                                 transform: translateY(-1px);
                                 box-shadow:$hover-shadow;
@@ -220,6 +226,15 @@ header{
                     background-color:#fff;
                     border-radius:3px;
                     box-shadow: $standard-shadow;
+
+                    @media only screen and (max-width:991px){
+
+                        margin-top:-45px;
+                        margin-bottom:45px;
+                        min-height:385px;
+                        padding-top:0;
+
+                    }
 
                     h2{
 
