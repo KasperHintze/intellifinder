@@ -5,6 +5,9 @@ session_start();
 if(isset($_SESSION['username'])){
 
 $prefix = '../../';
+    
+include_once($prefix.'code/incl_db.php');
+    
 $title = 'Page | Intellifinder';
 $site = 'page';
 
@@ -22,7 +25,7 @@ $site = 'page';
 <!-- MenuBar -->
 <?php include_once($prefix.'modules/backend/menubar.php'); ?>
 
-<!-- MenuBar -->
+<!-- Page options -->
 <?php include_once($prefix.'modules/backend/page.php'); ?>
 
 </body>

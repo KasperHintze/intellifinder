@@ -1,3 +1,16 @@
+<?php
+
+$crud = new Crud($objCon, "intelli_page");
+                
+$crud->SetArray("*");
+
+$cruds = $crud->Select("WHERE des = 'footer'");
+
+$res = $crud->SendSQL();
+
+$obj = $res->fetch_object();
+
+?>
 <footer>
 
 	<div class="container">
@@ -8,8 +21,8 @@
 
 				<div class="in-touch-wrapper">
 
-					<h2>Ready to get in touch?</h2>
-					<p>- Write an e-mail or give us a call</p>
+					<h2><?php echo $obj->title; ?></h2>
+					<p><?php echo $obj->text; ?></p>
 
 				<div class="sm-wrapper">
 

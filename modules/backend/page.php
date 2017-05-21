@@ -4,25 +4,36 @@
 
 	<table>
 		<tr>
-			<td>Title</td>
 			<td>Description</td>
+			<td>Title</td>
 			<td>Edit</td>
 		</tr>
+        
+        <?php
+
+
+            $crud = new Crud($objCon, "intelli_page");
+
+            $crud->SetArray("*");
+
+            $cruds = $crud->Select('');
+
+            $res = $crud->SendSQL();
+
+            while($obj = $res->fetch_object()){
+
+        ?>
+        
 		<tr>
-			<td>Header</td>
-			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit dict.</td>
+			<td><?php echo $obj->des; ?></td>
+			<td><?php echo $obj->title; ?></td>
 			<td><a href="<?php echo $prefix; ?>admin/pages/edit.php?id="><i class="material-icons edit">mode_edit</i></a></td>
 		</tr>
-		<tr>
-			<td>Intro</td>
-			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit dict.</td>
-			<td><a href="<?php echo $prefix; ?>admin/pages/edit.php?id="><i class="material-icons edit">mode_edit</i></a></td>
-		</tr>
-		<tr>
-			<td>Cases</td>
-			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit dict.</td>
-			<td><a href="<?php echo $prefix; ?>admin/pages/edit.php?id="><i class="material-icons edit">mode_edit</i></a></td>
-		</tr>
+        
+        <?php
+                
+            }
+        ?>
 	</table>
 
 </div>

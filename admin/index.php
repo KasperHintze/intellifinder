@@ -5,6 +5,9 @@ session_start();
 if(isset($_SESSION['username'])){
 
 $prefix = '../';
+    
+include_once($prefix.'code/incl_db.php');
+    
 $title = 'News | Intellifinder';
 $site = 'news';
 

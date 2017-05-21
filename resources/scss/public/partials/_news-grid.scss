@@ -2,9 +2,21 @@
     
     width: 100%;
     margin: 0 auto;
-    margin-top: 250px;
+    margin-top: 180px;
     position: relative;
     z-index: 10;
+    
+    .row {
+        margin-bottom: 70px;
+        .col-md-7 {
+            h1 {
+                color: #FFF;
+            }
+            p {
+                color: #FFF;
+            }
+        }
+    }
     
     .col {
     
@@ -17,44 +29,35 @@
     .box {
 
         width: 95%;
-        margin-right: 2.5%;
+        margin-right: 5%;
         height: auto;
         background: #FFF;
-        border: 1px solid #dddddd;
         float: left;
         margin-bottom: 20px;
-        border-radius: 5px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        border-radius: 3px;
+        box-shadow: $standard-shadow;
         overflow: hidden;
+        transition: 0.5s all;
 
     }
 
     .box img {
 
         float: left;
-        width: 96%;
-        margin-left: 2%;
+        width: 100%;
         background-size: cover;
         height: auto;
-        margin-top: 2%;
-        border-radius: 3px;
-        margin-bottom: 5%;
+        border-radius: 3px 3px 0px 0px;
         transition: 0.5s all;
-        -webkit-transition: 0.5s all;
-        -moz-transition: 0.5s all;
-        -o-transition: 0.5s all;
-        /*max-width: 100%;*/
 
     }
 
     .box p {
 
         float: left;
-        width: 96%;
-        margin-left: 2%;
-        margin-top: 2%;
-        margin-bottom: 5%;
-        color: #868686;
+        width: 100%;
+        padding: 10px;
+        color: $text-color;
         line-height: 22px;
         transition: 0.2s all;
         -webkit-transition: 0.2s all;
@@ -66,35 +69,11 @@
     }
 
     .box:hover {
-
-        border: 1px solid #3498db; 
+ 
         cursor: pointer;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        box-shadow: $hover-shadow;
+        transform: translateY(-2px);
 
-    }
-
-    .box:hover p {
-
-        color: #333 !important;
-
-    }
-
-    .box:hover i {
-
-        color: #333 !important;
-
-    }
-
-    .box i {
-
-        text-align: center;
-        width: 100%;
-        color: #868686;
-        line-height: 120px !important;
-        transition: 0.2s all;
-        -webkit-transition: 0.2s all;
-        -moz-transition: 0.2s all;
-        -o-transition: 0.2s all;
     }
 }
 

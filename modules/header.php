@@ -1,3 +1,16 @@
+<?php
+
+$crud = new Crud($objCon, "intelli_page");
+                
+$crud->SetArray("*");
+
+$cruds = $crud->Select("WHERE des = 'header'");
+
+$res = $crud->SendSQL();
+
+$obj = $res->fetch_object();
+
+?>
 <!--Header-->
 <header>
   <div class="header-background">
@@ -11,10 +24,8 @@
 
     <div class="row">
       <div class="col-md-7">
-        <h1>IntelliFinder ID + can be used by everyone</h1>
-        <p>IntelliFinder is one-of-a-kind cloud-based mobile solution for tagging installations geographically,
-        and managing related documentation, tasks and projects. It is designed to streamline work in the field
-        and save your company’s resources.</p>
+        <h1><?php echo $obj->title; ?></h1>
+        <p><?php echo $obj->text; ?></p>
         <a type="button" class="btn btn-success">EXPLORE THE APP</a>
         <a target="_blank" href="http://intellifinder.eu/" type="button" class="btn btn-default">LOG IN</a>
 
