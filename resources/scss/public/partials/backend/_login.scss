@@ -97,6 +97,7 @@ header {
 								outline: none;
 								border: 1px solid $border-color;
 								border-radius: 3px;
+								box-shadow: 0 0 0px 1000px white inset;
 								transition: all 0.2s ease-in;
 
 								&:focus ~ .floating-label,

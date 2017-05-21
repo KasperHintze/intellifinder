@@ -24,5 +24,6 @@ app.use(Tour);
 app.use(Footer);
 app.use(News);
 app.use(NewsGrid);
-//import $ from "jquery";
-//window.jQuery = window.$ = $;
+
+import $ from "jquery";
+window.jQuery = window.$ = $;

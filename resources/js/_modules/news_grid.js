@@ -40,20 +40,20 @@ export default class NewsGrid extends Module {
 
                     if(windowWidth > 1200){
 
-                        var dSize = 3;
+                        window.dSize = 3;
 
                         makeGrid(3, 0);
 
                     }else if(windowWidth > 810){
 
-                        var dSize = 2;
+                        window.dSize = 2;
 
                         makeGrid(2, 0);
 
 
                     }else if(windowWidth < 809) {
 
-                        var dSize = 1;
+                        window.dSize = 1;
 
                         makeGrid(1, 0);
 
@@ -61,7 +61,7 @@ export default class NewsGrid extends Module {
 
                         alert('else');   
 
-                        var dSize = 3;
+                        window.dSize = 3;
 
                     }
                     
@@ -82,7 +82,7 @@ export default class NewsGrid extends Module {
 
                             makeGrid(3, 0);
 
-                            var dSize = 3;
+                            window.dSize = 3;
 
                         }
 
@@ -94,7 +94,7 @@ export default class NewsGrid extends Module {
 
                             makeGrid(2, 0);
 
-                            var dSize = 2;
+                            window.dSize = 2;
 
                         }
 
@@ -106,7 +106,7 @@ export default class NewsGrid extends Module {
 
                             makeGrid(1, 0);
 
-                            var dSize = 1;
+                            window.dSize = 1;
 
                         }
 

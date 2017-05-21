@@ -1,5 +1,7 @@
 <?php
 
+	error_reporting(0);
+
     if($_FILES["img"]["name"] != ""){
 
 		$name = $_FILES["img"]["name"];
@@ -20,17 +22,23 @@
 
 	}
 
+	// Date
+	date_default_timezone_set('Europe/Copenhagen');
+	$date = date('Y/m/d');
+
+	$_POST['dat'] = $date;
+
     include ("incl_db.php");
 
     $crud = new Crud($objCon, "intelli_news");
 
-    echo $crud->SetArray($_POST);
+    $crud->SetArray($_POST);
 
-    echo $cruds = $crud->Create();
+    $cruds = $crud->Create();
 
     $crud->SendSQL();
     
-    //header("location: ../admin/index.php?news=created");
+    header("location: ../admin/index.php?news=created");
 
            
 ?> 

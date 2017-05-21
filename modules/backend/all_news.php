@@ -19,7 +19,7 @@
 
             $crud->SetArray("*");
 
-            $cruds = $crud->Select('');
+            $cruds = $crud->Select('ORDER BY id DESC');
 
             $res = $crud->SendSQL();
 
