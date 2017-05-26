@@ -22,6 +22,20 @@
 			margin-bottom: 10px;
 			position: relative;
 
+			.imgContainer {
+				position: relative;
+			    width: 50%;
+			    margin: 0 auto;
+			    overflow: hidden;
+			    margin-bottom: 20px;
+
+			    img {
+			    	float: left;
+			    	width: 100%;
+			    	height: auto;
+			    }
+			}
+
 			input {
 				color: #333;
 				position: relative;

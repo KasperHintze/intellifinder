@@ -27,7 +27,7 @@
 		<tr>
 			<td><?php echo $obj->des; ?></td>
 			<td><?php echo $obj->title; ?></td>
-			<td><a href="<?php echo $prefix; ?>admin/pages/edit.php?id="><i class="material-icons edit">mode_edit</i></a></td>
+			<td><a href="<?php echo $prefix; ?>admin/pages/edit.php?id=<?php echo $obj->id; ?>"><i class="material-icons edit">mode_edit</i></a></td>
 		</tr>
         
         <?php

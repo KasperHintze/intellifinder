@@ -11,9 +11,7 @@
 			<td>Edit</td>
 			<td>Delete</td>
 		</tr>
-        
         <?php
-
 
             $crud = new Crud($objCon, "intelli_news");
 
@@ -26,7 +24,6 @@
             while($obj = $res->fetch_object()){
 
         ?>
-        
             <tr>
                 <td><?php echo $obj->id; ?></td>
                 <td><?php echo $obj->title; ?></td>
@@ -35,10 +32,8 @@
                 <td><a href="<?php echo $prefix; ?>admin/pages/add_news.php?editId=<?php echo $obj->id; ?>"><i class="material-icons edit">mode_edit</i></a></td>
                 <td><a href="<?php echo $prefix; ?>code/code_deleteNews.php?id=<?php echo $obj->id; ?>"><i class="material-icons delete">delete</i></a></td>
             </tr>
-        
         <?php
             }
         ?>
 	</table>
-
 </div>

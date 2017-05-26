@@ -2,7 +2,6 @@
 
 $prefix = '';
 $title = 'Intellifinder';
-$frontpage = true;
 
 include_once($prefix.'code/incl_db.php');
 

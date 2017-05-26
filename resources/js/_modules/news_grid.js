@@ -14,7 +14,6 @@ export default class NewsGrid extends Module {
             
             var boxes = [];
             
-            // Her henter jeg nyheder og putter i arrayet "boxes"
             $.ajax({
  
                 url : "../code/code_getNews.php",

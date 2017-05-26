@@ -97,7 +97,6 @@ header {
 								outline: none;
 								border: 1px solid $border-color;
 								border-radius: 3px;
-								box-shadow: 0 0 0px 1000px white inset;
 								transition: all 0.2s ease-in;
 
 								&:focus ~ .floating-label,
@@ -112,6 +111,9 @@ header {
 									border: 1px solid $primary-navy;
 								}
 
+							}
+							input:-webkit-autofill {
+								box-shadow: 0 0 0px 1000px white inset;
 							}
 							input[type=submit]{
 								background: $primary-green;

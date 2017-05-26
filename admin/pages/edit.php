@@ -7,16 +7,9 @@ if(isset($_SESSION['username'])){
 $prefix = '../../';
     
 include_once($prefix.'code/incl_db.php');
-
-if(isset($_GET['editId'])){
     
-	$title = 'Edit news | Intellifinder';
+$title = 'Edit page option | Intellifinder';
 
-}else {
-
-	$title = 'Add news | Intellifinder';
-
-}
 $site = 'news';
 
 ?>
@@ -43,7 +36,7 @@ $site = 'news';
 <?php include_once($prefix.'modules/backend/menubar.php'); ?>
 
 <!-- Add News -->
-<?php include_once($prefix.'modules/backend/add_news.php'); ?>
+<?php include_once($prefix.'modules/backend/edit_page.php'); ?>
 
 </body>
 </html>

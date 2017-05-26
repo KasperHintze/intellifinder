@@ -1,7 +1,6 @@
 <?php
-
 	error_reporting(0);
-
+	
     if($_FILES["img"]["name"] != ""){
 
 		$name = $_FILES["img"]["name"];
@@ -32,13 +31,11 @@
 
     $crud = new Crud($objCon, "intelli_news");
 
-    $crud->SetArray($_POST);
+	echo $crud->SetArray($_POST);
 
-    $cruds = $crud->Create();
+    echo $cruds = $crud->Create();
 
-    $crud->SendSQL();
+    //$crud->SendSQL();
     
-    header("location: ../admin/index.php?news=created");
-
-           
+    //header("location: ../admin/index.php?news=created");          
 ?> 
