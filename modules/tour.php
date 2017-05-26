@@ -21,7 +21,7 @@ $obj = $res->fetch_object();
                 
                 <div class="imgWrapper">
                     
-	               <img src="<?php echo $prefix; ?>assets/img/app-guts-ipad.svg" alt="IntelliFinder">
+	               	<img src="<?php echo $prefix; ?>assets/img/app-guts-ipad.svg" alt="IntelliFinder">
                     
                     <img src="<?php echo $prefix; ?>assets/img/app-guts.svg" alt="IntelliFinder">
                     

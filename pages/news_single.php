@@ -22,7 +22,7 @@ $title = $obj->title.' | Intellifinder';
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <?php include_once($prefix.'includes/header.php'); ?>
     </head>

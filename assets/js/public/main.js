@@ -14121,7 +14121,7 @@ var NewsGrid = function (_Module) {
                         var newImg = '';
                     } else {
 
-                        var newImg = '<img class="images" data-src="' + img + '">';
+                        var newImg = '<img class="images" alt="News image" data-src="' + img + '">';
                     }
 
                     if (text == '') {

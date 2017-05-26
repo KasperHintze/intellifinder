@@ -26,11 +26,11 @@ $obj = $res->fetch_object();
       <div class="col-md-7">
         <h1><?php echo $obj->title; ?></h1>
         <p><?php echo $obj->text; ?></p>
-        <a type="button" class="btn btn-success">EXPLORE THE APP</a>
-        <a target="_blank" href="http://intellifinder.eu/" type="button" class="btn btn-default">LOG IN</a>
+        <a class="btn btn-success">EXPLORE THE APP</a>
+        <a target="_blank" href="http://intellifinder.eu/" class="btn btn-default">LOG IN</a>
 
-        <a target="_blank" href="https://itunes.apple.com/dk/app/intellifinder-id-plus/id979128138?l=da&mt=8"><img class="get-it noselect" src="<?php echo $prefix; ?>assets/img/app-google-store/app.png"></a>
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=eu.intellifinder&hl=da"><img class="get-it noselect" src="<?php echo $prefix; ?>assets/img/app-google-store/google.png"></a>
+        <a target="_blank" href="https://itunes.apple.com/dk/app/intellifinder-id-plus/id979128138?l=da&mt=8"><img class="get-it noselect" src="<?php echo $prefix; ?>assets/img/app-google-store/app.png" alt="Get in on the App Store"></a>
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=eu.intellifinder&hl=da"><img class="get-it noselect" src="<?php echo $prefix; ?>assets/img/app-google-store/google.png" alt="Get it on Google Play"></a>
 
       </div>
 
@@ -40,4 +40,5 @@ $obj = $res->fetch_object();
         </div>
       </div>
   </div>
+</div>
 </header>

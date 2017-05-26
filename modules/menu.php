@@ -1,5 +1,5 @@
     <nav>
-      <a href="<?php echo $prefix; ?>index.php"><img class="noselect" src="<?php echo $prefix; ?>assets/img/logo.svg"></a>
+      <a href="<?php echo $prefix; ?>index.php"><img class="noselect" alt="Logo" src="<?php echo $prefix; ?>assets/img/logo.svg"></a>
       <ul>
         <li><a class="noselect" href="#cases">CASES</a></li>
         <li><a class="noselect" href="<?php echo $prefix; ?>pages/news.php">NEWS</a></li>

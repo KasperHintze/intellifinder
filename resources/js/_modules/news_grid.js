@@ -276,7 +276,7 @@ export default class NewsGrid extends Module {
 
                 } else {
 
-                    var newImg = '<img class="images" data-src="'+ img +'">';
+                    var newImg = '<img class="images" alt="News image" data-src="'+ img +'">';
 
                 }
 

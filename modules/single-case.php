@@ -16,7 +16,7 @@
                         
                             <div class="col-lg-4">
                             
-                                <img src="<?php echo $prefix;?>assets/img/coop.png">
+                                <img src="<?php echo $prefix;?>assets/img/coop.png" alt="Coop">
 
                                 <h1>Coop Danmark</h1>
                             
