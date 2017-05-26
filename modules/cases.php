@@ -38,7 +38,7 @@ $obj = $res->fetch_object();
               <h3>Banedanmark</h3>
               <p>– Intelligent detektorløsning i stedet for detektivarbejde</p>
 
-              <button type="button" class="btn btn-success">Read more</button>
+              <a href="<?php echo $prefix;?>pages/cases.php"><button type="button" class="btn btn-success">Read more</button></a>
 
             </div>
           </div>
@@ -55,7 +55,7 @@ $obj = $res->fetch_object();
               <h3>Coop</h3>
               <p>– Changing out router in all Coop shops</p>
 
-              <button type="button" class="btn btn-success">Read more</button>
+              <a href="<?php echo $prefix;?>pages/cases.php"><button type="button" class="btn btn-success">Read more</button></a>
 
             </div>
           </div>
@@ -75,7 +75,7 @@ $obj = $res->fetch_object();
               <h3>Frederiksbjerg Forsyning</h3>
               <p>– Intelligent detektorløsning i stedet for detektivarbejde</p>
 
-              <button type="button" class="btn btn-success">Read more</button>
+              <a href="<?php echo $prefix;?>pages/cases.php"><button type="button" class="btn btn-success">Read more</button></a>
 
             </div>
           </div>
@@ -92,7 +92,7 @@ $obj = $res->fetch_object();
               <h3>Sas Airlines</h3>
               <p>– Intelligent detektorløsning i stedet for detektivarbejde</p>
 
-              <button type="button" class="btn btn-success">Read more</button>
+              <a href="<?php echo $prefix;?>pages/cases.php"><button type="button" class="btn btn-success">Read more</button></a>
 
             </div>
           </div>
