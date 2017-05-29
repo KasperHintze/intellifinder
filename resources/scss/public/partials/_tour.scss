@@ -81,6 +81,12 @@
                         color: #FFF;
                         position: absolute;
                         top: 20px;
+
+                        @media only screen and (max-width:517px){
+
+                            top:-40px;
+
+                        }
                     }
                     
                     @keyframes sendToBack {

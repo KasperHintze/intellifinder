@@ -19,7 +19,7 @@ $obj = $res->fetch_object();
 
 				<img class="location-img" src="<?php echo $prefix; ?>assets/img/locationPointer.svg" alt="Location pointer">
 
-				<div class="in-touch-wrapper">
+				<div class="in-touch-wrapper" id="contact">
 
 					<h2><?php echo $obj->title; ?></h2>
 					<p><?php echo $obj->text; ?></p>

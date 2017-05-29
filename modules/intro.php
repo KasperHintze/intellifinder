@@ -26,11 +26,11 @@ $obj = $res->fetch_object();
 						<div class="pulser"></div>
 					</div>
 
-					<h2 class="text-align-right"><?php echo $obj->title; ?></h2>
+					<h2><?php echo $obj->title; ?></h2>
 
 				</div>
 
-				<p class="text-align-right"><?php echo $obj->text; ?></p>
+				<p><?php echo $obj->text; ?></p>
 
 
 				<a href="#cases">Discover how businesses use IntelliFinder</a>
