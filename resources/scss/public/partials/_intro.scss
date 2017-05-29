@@ -3,15 +3,41 @@
 	margin-top: 80px;
 	width: 100%;
 	position: relative;
+	
+	@media only screen and (max-width:517px){
+
+		margin-top:170px;
+
+	}
 
 	.container {
 		.row {
 			.col-md-6 {
 
+				.pulseWrap{
+
+					@media only screen and (max-width:517px){
+
+						float:none;
+						margin-left:auto;
+						margin-right:auto;
+						margin-bottom:20px;
+
+					}
+				}
+
 				h2 {
 					margin-bottom: 30px;
 					float: right;
 					margin-right: 40px;
+					text-align:right;
+
+					@media only screen and (max-width:517px){
+
+						text-align:center;
+
+					}
+
 				}
 
 				p {
@@ -19,6 +45,14 @@
 					margin-bottom: 30px;
 					color: $text-color;
 					border-bottom: 2px solid $border-color;
+					text-align:right;
+
+					@media only screen and (max-width:517px){
+
+						text-align:center;
+
+					}
+
 				}
 
 				a {
@@ -28,6 +62,14 @@
 					transition: all 0.2s ease-in;
 					font-weight: 500;
 					font-size: 17px;
+
+					@media only screen and (max-width:517px){
+
+						float:none;
+						display:block;
+						text-align:center;
+
+					}
 
 					&:hover {
 						text-decoration: none;
@@ -61,7 +103,7 @@
 				right: -20px;
 				top: -50px;
 				width: 712px;
-    		height: 552px;
+    			height: 552px;
 				z-index: 50;
 
     			@media only screen and (max-width: 1400px) {
@@ -75,6 +117,12 @@
 				@media only screen and (max-width: 991px) {
 				  position: static;
 				  margin-top: 40px;
+				}
+
+				@media only screen and (max-width:517px){
+
+					display:none;
+
 				}
 
 				img {

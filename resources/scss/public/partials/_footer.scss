@@ -40,19 +40,19 @@ footer {
 						transform: translateY(-1px);
 					}
 
-					@media only screen and(max-width:1200px){
+					@media only screen and (max-width:1200px){
 
 						left: 120px;
 
 					}
 
-					@media only screen and(max-width:991px){
+					@media only screen and (max-width:991px){
 
 						left: 60px;
 
 					}
 
-					@media only screen and(max-width:780px){
+					@media only screen and (max-width:780px){
 
 						display:none;
 
@@ -74,19 +74,19 @@ footer {
 						transform: translateY(-1px);
 					}
 
-					@media only screen and(max-width:1200px){
+					@media only screen and (max-width:1200px){
 
 						right: 120px;
 
 					}
 
-					@media only screen and(max-width:991px){
+					@media only screen and (max-width:991px){
 
 						right: 60px;
 
 					}
 
-					@media only screen and(max-width:780px){
+					@media only screen and (max-width:780px){
 
 						display:none;
 
@@ -99,6 +99,7 @@ footer {
 					display:inline-block;
 					position:relative;
 					top:45px;
+
 				}
 
 				.in-touch-wrapper{
@@ -106,6 +107,12 @@ footer {
 					display:inline-block;
 					top:85px;
 					margin-left:40px;
+
+					@media only screen and (max-width:517px){
+
+						margin-left:0;
+
+					}
 
 					p{
 						color:$text-color;
@@ -201,6 +208,12 @@ footer {
 					color:$text-color;
 					text-align:left;
 
+					@media only screen and (max-width:517px){
+
+						width:350px;
+
+					}
+
 					&:hover{
 						transform: translateY(-1px);
 						box-shadow:$hover-shadow;
@@ -231,7 +244,7 @@ footer {
 
 					}
 
-					@media only screen and(max-width:780px){
+					@media only screen and (max-width:780px){
 
 						left:0;
 						margin:0 auto;
@@ -247,6 +260,12 @@ footer {
 						right:55px;
 						top:85px;
 						opacity:0.38;
+
+						@media only screen and (max-width:517px){
+
+							opacity:0.15;
+
+						}
 					}
 				}
 
@@ -258,23 +277,29 @@ footer {
 					//Placeholder for google maps
 					background-image:url("../img/map.jpg");
 
-					@media only screen and(max-width:1200px){
+					@media only screen and (max-width:1200px){
 
 						left:250px;
 
 					}
 
-					@media only screen and(max-width:991px){
+					@media only screen and (max-width:991px){
 
 						left:150px;
 
 					}
 
-					@media only screen and(max-width:780px){
+					@media only screen and (max-width:780px){
 
 						left:0;
 						margin:0 auto;
 						margin-top:200px;
+
+					}
+					
+					@media only screen and (max-width:517px){
+
+						background-position:center;
 
 					}
 				}

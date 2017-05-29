@@ -22,15 +22,15 @@ $obj = $res->fetch_object();
 	     		<div class="row">
 
 		     		<div class="pulseWrap">
-						<div class="pulseDot noBackground"><img src="<?php echo $prefix; ?>assets/img/intellifinder-circle.svg" alt="IntelliFinder logo"></div>
+						<div class="pulseDot noBackground"><img src="<?php echo $prefix; ?>assets/img/new-logo.svg" alt="IntelliFinder logo"></div>
 						<div class="pulser"></div>
 					</div>
 
-					<h2 class="text-align-right"><?php echo $obj->title; ?></h2>
+					<h2><?php echo $obj->title; ?></h2>
 
 				</div>
 
-				<p class="text-align-right"><?php echo $obj->text; ?></p>
+				<p><?php echo $obj->text; ?></p>
 
 
 				<a href="#cases">Discover how businesses use IntelliFinder</a>
