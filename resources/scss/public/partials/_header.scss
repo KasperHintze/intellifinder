@@ -14,6 +14,12 @@ header{
     box-shadow:0 6px 10px rgba(0, 0, 0, 0.10);
     background:linear-gradient(150deg, $primary-moron 25%, $primary-orange 94%);
 
+        @media only screen and (max-width:517px){
+
+					height:940px;
+
+				}
+
     span{
       position:absolute;
       height:33%;
@@ -50,12 +56,26 @@ header{
 
       img{
         width:260px;
+
+        @media only screen and (max-width:517px){
+
+          display:block;
+          margin:0 auto;
+
+				}
       }
 
       ul{
         list-style: none;
         float:right;
         line-height:45px;
+
+        @media only screen and (max-width:517px){
+
+					margin-top:55px;
+          text-align:center;
+
+				}
         
         li{
           display:inline-block;
@@ -64,6 +84,12 @@ header{
 
           &:last-child{
             padding-right:0;
+
+            @media only screen and (max-width:517px){
+
+              padding-right:25px;
+
+            }
           }
 
           a{
@@ -86,6 +112,13 @@ header{
     .row{
 
       .col-md-7{
+
+        @media only screen and (max-width:517px){
+
+					text-align:center;
+
+				}
+
         padding-top:180px;
 
         h1{
@@ -96,16 +129,57 @@ header{
         p{
           padding-right:95px;
           margin-bottom:45px;
+
+          @media only screen and (max-width:517px){
+
+						padding-right:0;
+
+					}
+
         }
 
         .btn-success{
           width:300px;
+
         }
 
         .btn-default{
           width:190px;
           color:$blue-font;
           margin-left: 30px;
+
+          @media only screen and (max-width:517px){
+
+						margin:0 auto;
+            display:block;
+            margin-bottom:30px;
+
+					}
+
+        }
+
+        .app-button{
+
+          height:50px;
+
+          @media only screen and (max-width:517px){
+
+            margin:0 auto;
+
+					}
+
+          img{
+
+            @media only screen and (max-width:517px){
+
+              float:none;
+              margin-right:0;
+              margin-top:15px;
+
+            }
+          }
+
+
         }
 
         .get-it {

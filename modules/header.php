@@ -29,8 +29,8 @@ $obj = $res->fetch_object();
         <a class="btn btn-success">EXPLORE THE APP</a>
         <a target="_blank" href="http://intellifinder.eu/" class="btn btn-default">LOG IN</a>
 
-        <a target="_blank" href="https://itunes.apple.com/dk/app/intellifinder-id-plus/id979128138?l=da&mt=8"><img class="get-it noselect" src="<?php echo $prefix; ?>assets/img/app-google-store/app.png" alt="Get in on the App Store"></a>
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=eu.intellifinder&hl=da"><img class="get-it noselect" src="<?php echo $prefix; ?>assets/img/app-google-store/google.png" alt="Get it on Google Play"></a>
+        <a class="app-button" target="_blank" href="https://itunes.apple.com/dk/app/intellifinder-id-plus/id979128138?l=da&mt=8"><img class="get-it noselect" src="<?php echo $prefix; ?>assets/img/app-google-store/app.png" alt="Get in on the App Store"></a>
+        <a class="app-button" target="_blank" href="https://play.google.com/store/apps/details?id=eu.intellifinder&hl=da"><img class="get-it noselect" src="<?php echo $prefix; ?>assets/img/app-google-store/google.png" alt="Get it on Google Play"></a>
 
       </div>
 
