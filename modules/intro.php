@@ -22,7 +22,7 @@ $obj = $res->fetch_object();
 	     		<div class="row">
 
 		     		<div class="pulseWrap">
-						<div class="pulseDot noBackground"><img src="<?php echo $prefix; ?>assets/img/intellifinder-circle.svg" alt="IntelliFinder logo"></div>
+						<div class="pulseDot noBackground"><img src="<?php echo $prefix; ?>assets/img/new-logo.svg" alt="IntelliFinder logo"></div>
 						<div class="pulser"></div>
 					</div>
 

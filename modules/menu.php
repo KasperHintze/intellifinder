@@ -19,7 +19,7 @@
       <ul>
         <li><a class="noselect" href="<?php echo $link?>">CASES</a></li>
         <li><a class="noselect" href="<?php echo $prefix; ?>pages/news.php">NEWS</a></li>
-        <li><a class="noselect" href="#aboutus">ABOUT US</a></li>
+        <li><a class="noselect" href="<?php echo $prefix; ?>pages/about.php">ABOUT US</a></li>
         <li><a class="noselect" href="#contact">CONTACT</a></li>
       </ul>
     </nav>

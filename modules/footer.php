@@ -17,7 +17,7 @@ $obj = $res->fetch_object();
 		<div class="row">
 			<div class="col-lg-6">
 
-				<img class="location-img" src="<?php echo $prefix; ?>assets/img/locationPointer.svg" alt="Location pointer">
+				<img class="location-img" src="<?php echo $prefix; ?>assets/img/new-location-logo.svg" alt="Location pointer">
 
 				<div class="in-touch-wrapper" id="contact">
 
