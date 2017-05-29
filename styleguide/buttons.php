@@ -40,127 +40,107 @@
                 
                 <div class="buttonsWrapper">
                 
-                    <li class="menuItem">
-                        <a>Menu punkt</a>
-                    </li>
-                    
-                    <a class="calenderItem">Kalender</a>
-                    
-                    <a class="seMere">Se mere</a>
+                    <a class="btn btn-success">CTA Knap</a>
 
-                    <a class="priser">Priser</a>
+                    <a class="btn btn-default">Simpel knap</a>
+
+                    <a class="text-btn">Tekst knap</a>
+
+                    <a><span><i class="fa fa-facebook"></i></span></a>
                     
                 </div><!-- imgWrapper -->
                 
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox" style="height: 1420px !important;">
-CSS:
-                    
-.menuItem {
-
+                <p>Her ser vi Sass stylingen for<code>Knapper</code>:</p>
+                <pre>
+<code>.btn {
+    font-size: 20px;
     height: 50px;
-    list-style: none;
+    margin-bottom: 30px;
+    line-height: 40px;
+    border: none;
     display: inline-block;
-    font-size: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
     text-align: center;
-    border-right: 2px solid rgba(0, 0, 0, 0.14);
-    -webkit-transform: skewX(-20deg);
-    -moz-transform: skewX(-20deg);
-    -ms-transform: skewX(-20deg);
-    -o-transform: skewX(-20deg);
-    transform: skewX(-20deg);
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.16);
+    transition: all 0.2s ease-in;
+}
+
+.btn-success{
+    width:300px;
+}
+
+.btn-default{
+    width:190px;
+    color:$blue-font;
+    margin-left: 30px;
+}
+
+.text-btn {
     float: left;
-
-}
-
-.menuItem a {
-
-    cursor: pointer;
-    font-weight: 100;
-    text-decoration: none;
-    color: #333;
-    display: block;
-    -webkit-transform: skewX(20deg);
-    -moz-transform: skewX(20deg);
-    -ms-transform: skewX(20deg);
-    transform: skewX(20deg);
-    -o-transform: skewX(20deg);
-    line-height: 31px;
-
-}
-
-.menuItem a:hover {
-
-    color: #f1c40f;
-
-}
-
-.calenderItem {
-
-    cursor: pointer;
-    background-color: #48bd73;
-    height: 50px;
-    margin-right: 20px;
-    color: #FFF;
-    width: 200px;
+    color: #6772E5;
+    transition: all 0.2s ease-in;
+    font-weight: 500;
+    font-size: 17px;
     line-height: 50px;
-    text-align: center;
-    float: left;
     margin-left: 20px;
     margin-right: 20px;
-
-
+    &:hover {
+        text-decoration: none;
+        color: #32325d;
+    }
+    &::after {
+        content: 'keyboard_arrow_right';
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 50px;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        padding-top: 2px;
+        position: absolute;
+    }
 }
-
-.seMere {
-
-    cursor: pointer;
-    color: #FFF;
-    float: left;
-    border-radius: 30px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-right: 35px;
-    padding-left: 35px;
-    background-color: #3498db;
-
-}
-
-.priser {
-
-    float: left;
-    height: 50px;
-    line-height: 50px;
-    margin-left: 15px;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: bold;
-
-}
-
-.priser:hover {
-
-    color: #f1c40f;
-
-}
-                    
-HTML:
-                    
-<li class="menuItem">
-    <a>Menu punkt</a>
-</li>
-                    
-<a class="calenderItem">Kalender</a>
-                    
-<a class="seMere">Se mere</a>
-
-<a class="priser">Priser</a>
-                </textarea>
+span {
+    display: inline-block;
+    height: 55px;
+    width: 55px;
+    box-shadow: $standard-shadow;
+    border-radius: 50%;
+    margin-left: 20px;
+    padding-top: 15px;
+    text-align: center;
+    transition: all 0.2s ease-in;
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: $hover-shadow;
+    }
+    i {
+        color: $blue-font;
+        font-size: 28px;
+        text-align: center;
+    }
+}</pre>
                 
             </div><!-- wrapper -->
             

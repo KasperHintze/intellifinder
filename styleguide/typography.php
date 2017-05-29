@@ -57,21 +57,7 @@ abcdefghijklmnopqrstuvwxyz
 1234567890(,.;:?!$&*)</div>
                     
                 </div><!-- fontWrapper -->
-                
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox" style="height: 140px !important;">
-CSS:
-                    
-* {
-                    
-font-family: 'Montserrat';
-                    
-}
-                </textarea>
-                
-                <h2>Brug af headers</h2>
-                
+
                 <div class="headers">
                 
                     <h1>Header 1</h1>
@@ -88,23 +74,13 @@ font-family: 'Montserrat';
                     
                 </div>
                 
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox" style="height: 210px !important;">
-                    
-<h1>Header 1</h1>
-                    
-<h2>Header 2</h2>
-                    
-<h3>Header 3</h3>
-                    
-<h4>Header 4</h4>
-                    
-<h5>Header 5</h5>
-                    
-<h6>Header 6</h6>
-                </textarea>
-                
+                <p>Her ser vi Sass stylingen for<code>Montserrat</code>:</p>
+                <pre>
+<code>* {
+
+    font-family: 'Montserrat';
+
+}</code></pre>
                 
             </div><!-- wrapper -->
             

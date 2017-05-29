@@ -40,39 +40,23 @@
                 
                     <div class="logoWrapper">
 
-                        <img src="../imgs/zoologo-01.png" alt="logo">
+                        <img src="<?php echo $prefix; ?>assets/img/intellifinder_dark.svg" alt="logo">
 
                     </div><!-- logoWrapper -->
 
                     <div class="logoWrapper grey">
 
-                        <img src="../imgs/zoologo-white.png" alt="logo">
+                        <img src="<?php echo $prefix; ?>assets/img/logo.svg" alt="logo">
 
                     </div><!-- logoWrapper -->
                     
                 </div><!-- illustrations -->
                 
-                <span>Code:</span>
+                <h2>Alternativt logo</h2>
                 
-                <p>This is the <code>Panel</code> constructor:</p>
-                <pre><code>function Panel(element, canClose, closeHandler) {
-                  this.element = element;
-                  this.canClose = canClose;
-                  this.closeHandler = function () { if (closeHandler) closeHandler() };
-                }</code></pre>
-                
-                <textarea disabled class="codeBox"><img src="../imgs/zoologo-01.png" alt="logo">
-<img src="../imgs/zoologo-white.png" alt="logo"></textarea>
-                
-                <h2>Simplificeret logo</h2>
-                
-                <div class="illustrations">
-                        <h1 class="left">Odense Zoo</h1>
+                <div class="logoWrapper">
+                        <img src="<?php echo $prefix; ?>assets/img/intellifinder-alternative.svg" alt="logo">
                 </div><!-- illustrations -->
-                
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox"><h1>Odense Zoo</h1></textarea>
                 
             </div><!-- wrapper -->
             

@@ -32,13 +32,13 @@
         
             <div class="wrapper">
             
-                <h1>Velkommen til Odense Zoos styleguide!</h1>
+                <h1>Velkommen til Intellifinder styleguide!</h1>
                 
                 <h2>Introduktion</h2>
                 
-                <p>Disse "guidelines" viser <strong>Odense Zoos</strong> brand værdier og elementer. Styleguiden er regler og kode til at hjælpe med at komponere og producere spændende designs med en høj grad kreativitet</p>
+                <p>Disse "guidelines" viser <strong>Intellifinders</strong> brand værdier og elementer. Styleguiden er regler og kode til at hjælpe med at komponere og producere spændende designs med en høj grad kreativitet</p>
 
-                <img src="../imgs/tigers.jpg">
+                <img src="<?php echo $prefix; ?>assets/img/app-guts-ipad.svg" alt="Intro image">
                 
             </div><!-- wrapper -->
             

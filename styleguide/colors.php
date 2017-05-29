@@ -40,101 +40,47 @@
                 
                 <div class="imgWrapper">
                 
-                    <div class="colorBox" style="background: #2ecc71;"></div>
+                    <div class="colorBox" style="background: #FAA61A;"></div>
                     
-                    <div class="colorBox" style="background: #f1c40f;"></div>
+                    <div class="colorBox" style="background: #e26626;"></div>
                     
                 </div><!-- imgWrapper -->
-                
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox" style="height: 250px !important;">
-CSS:
-                    
-div1 {
-                    
-background: #2ecc71;
-            
-                    
-}
-                    
-div2 {
-                    
-background: #f1c40f;
-            
-                    
-}
-                </textarea>
                 
                 <h2>Alle farver</h2>
                 
-                <p>Alle farverne er varme og vigtigst af alt nøglen til at skabe Odense Zoos tema.</p>
+                <p>Alle farverne er varme og vigtigst af alt nøglen til at skabe Intellifinders tema.</p>
 
                 <div class="imgWrapper">
                 
-                    <div class="colorBox" style="background: #2ecc71;"></div>
+                    <div class="colorBox" style="background: #FAA61A;"></div>
                     
-                    <div class="colorBox" style="background: #f1c40f;"></div>
+                    <div class="colorBox" style="background: #e26626;"></div>
                     
-                    <div class="colorBox" style="background: #3498db;"></div>
+                    <div class="colorBox" style="background: #3ECF8E;"></div>
                     
-                    <div class="colorBox" style="background: #e74c3c;"></div>
-                    
-                    <div class="colorBox" style="background: #333;"></div>
+                    <div class="colorBox" style="background: #7795F8;"></div>
 
-                    <div class="colorBox" style="background: #2c3e50;"></div>
-                    
-                    <div class="colorBox" style="background: rgba(0,0,0,0.6);"></div>
+                    <div class="colorBox" style="background: #6B7C93;"></div>
+
+                    <div class="colorBox" style="background: #F6F9FC;"></div>
                     
                 </div><!-- imgWrapper -->
                 
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox" style="height: 640px !important;">
-CSS:
-                    
-div1 {
-                    
-background: #2ecc71;
-                    
-}
-                    
-div2 {
-                    
-background: #f1c40f;
-                    
-}
-                    
-div3 {
-                    
-background: #3498db;
-                    
-}
-                    
-div4 {
-                    
-background: #e74c3c;
-                    
-}
-                    
-div5 {
-                    
-background: #333;
-                    
-}
-                    
-div6 {
-                    
-background: #2c3e50;
-                    
-}
-                    
-div7 {
-                    
-background: rgba(0,0,0,0.6);
-                    
-}
-                </textarea>
+                <p>Her ser vi farvekoderne til<code>Alle farver</code>:</p>
+                <pre>
+<code>/* Primary colors */
+
+$primary-orange: #FAA61A;
+$primary-moron: #e26626;
+$primary-green: #3ECF8E;
+
+/* Text colors */
+$text-color: #6B7C93;
+$blue-font: #7795F8;
+
+/* Background colors */
+$graytone-background: #F6F9FC;
+</code></pre>
                 
             </div><!-- wrapper -->
             

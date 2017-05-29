@@ -36,49 +36,37 @@
                 
                 <h2>Minumum størrelse</h2>
                 
-                <p>Minimum størrelsen på logoet skal være 160x90px, alt under det skal ses som et ikon.</p>
+                <p>Minimum størrelsen på logoet skal være 265x45px, alt under det skal ses som et ikon.</p>
                 
                 <div class="imgWrapper">
                     
-                    <img style="width:160px; height:90px;" src="../imgs/zoologo-01.png" alt="logo">
+                    <img src="<?php echo $prefix; ?>assets/img/intellifinder_dark.svg" alt="logo" style="width: 260px; height:45px;">
                     
                 </div><!-- imgWrapper -->
                 
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox"><img style="width:160px; height:90px;" src="../imgs/zoologo-01.png" alt="logo"></textarea>
-                
                 <h2>Generel padding</h2>
                 
-                <p>Den generelle padding er 15px, det er med til at give siden en masse fri rum så tingende spiller bedre sammen.</p>
+                <p>Den generelle padding er 25px, det er med til at give siden en masse fri rum så tingende spiller bedre sammen.</p>
                 
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox" style="height: 140px !important;">
-CSS:
-                    
-div {
-                    
-padding: 15px;
-                    
-}
-                </textarea>
+                <p>Her ser vi Sass stylingen for<code>Padding</code>:</p>
+                <pre>
+<code>element {
+
+    padding: 25px;
+
+}</code></pre>
                 
                 <h2>Generel margin</h2>
                 
-                <p>Den generelle margin er 20px, det er med til at give siden en masse fri rum så tingende spiller bedre sammen.</p>
+                <p>Den generelle margin er 30px, det er med til at give siden en masse fri rum så tingende spiller bedre sammen.</p>
                 
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox" style="height: 140px !important;">
-CSS:
-                    
-div {
-                    
-margin: 20px;
-                    
-}
-                </textarea>
+                <p>Her ser vi Sass stylingen for<code>Margin</code>:</p>
+                <pre>
+<code>element {
+
+    margin: 30px;
+
+}</code></pre>
                 
             </div><!-- wrapper -->
             

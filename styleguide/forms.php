@@ -44,25 +44,25 @@
 
                         <form>
 
-                            <h1>Log ind</h1>
+                          <label>
+                          
+                            <input type="text" name="username" required autofocus>
+                            <span class="floating-label">Username</span>
 
-                            <label>
+                          </label>
 
-                                <p>Brugernavn</p>
+                          <label>
+                          
+                            <input type="password" name="password" required>
+                            <span class="floating-label">Password</span>
 
-                                <input class="input" type="text" name="name" autofocus required>
+                          </label>
 
-                            </label>
+                          <label>
+                          
+                            <input type="submit" value="Login">
 
-                            <label>
-
-                                <p>Brugernavn</p>
-
-                                <input class="input" type="password" name="password" required>
-
-                            </label>
-
-                            <input class="submit" type="submit" value="Log ind" disabled>
+                          </label>
 
                         </form>
 
@@ -70,126 +70,69 @@
                     
                 </div><!-- formWrapper -->
                 
-                <span>Code:</span>
-                
-                <textarea disabled class="codeBox" style="height: 1450px !important;">
-CSS:
-                    
-.formWrapper {
-    
-    float:left;
-    width: 100%;   
-    background: #f1f1f1;
-    margin-bottom: 20px;
-    
-}
+                <p>Her ser vi Sass stylingen for<code>Forms</code>:</p>
+                <pre>
+<code>form {
+            float: left;
+            label {
+                position: relative;
+                float: left;
+                width: 100%;
+                input {
+                    color: $text-color;
+                    position: relative;
+                    padding: 10px;
+                    padding-left: 20px;
+                    width: 100%;
+                    margin-bottom: 15px;
+                    outline: none;
+                    border: 1px solid $border-color;
+                    border-radius: 3px;
+                    transition: all 0.2s ease-in;
 
-#loginBox {
-    
-    float:left;
-    width: 30%;
-    padding: 15px;
-    height: auto;
-    border-radius: 3px;
-    background: #FFF;
-    z-index: 887465709;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    margin-left: 20px;
-    
-}
+                    &:focus ~ .floating-label,
+                    &:not(:focus):valid ~ .floating-label{
+                      top: -25px;
+                      left: 0px;
+                      font-size: 11px;
+                      opacity: 1;
+                    }
 
-#loginBox form {
-    
-    float:left;
-    width: 100%;
-    
-}
+                    &:focus {
+                        border: 1px solid $primary-navy;
+                    }
 
-#loginBox form input {
-    
-    float:left;
-    width: 100%;
-    padding: 10px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    border: none;
-    border-bottom: 3px solid #f1f1f1;
-    margin-bottom: 15px;
-    outline: none;
-    
-}
+                }
+                input:-webkit-autofill {
+                    box-shadow: 0 0 0px 1000px white inset;
+                }
+                input[type=submit]{
+                    background: $primary-green;
+                    color: #FFF;
+                    border: none;
+                    box-shadow: $standard-shadow;
+                    border-radius: 3px;
+                    margin-bottom: 0px;
+                    text-transform: uppercase;
+                    font-weight: bold;
 
-#loginBox form input[type=text] {
-    
-    background: none;
-    
-}
+                    &:hover {
+                        background: lighten($primary-green, 5%);
+                        box-shadow: $hover-shadow;
+                    }
 
-#loginBox form input[type=email] {
-    
-    background: none;
-    
-}
+                }
 
-#loginBox form input[type=password] {
-    
-    background: none;
-    
-}
-
-#loginBox form input[type=submit] {
-    
-    color: #FFF;
-    border-bottom: none;
-    background: #2ecc71;
-    
-}
-
-#loginBox form input:focus {
-    
-    border-bottom: 3px solid #3498db;
-    
-}
-                    
-                    
-                    
-                    
-HTML:
-                    
-<div class="formWrapper">
-                
-    <div id="loginBox">
-
-        <form>
-
-            <h1>Log ind</h1>
-
-            <label>
-
-                <p>Brugernavn</p>
-
-                <input class="input" type="text" name="name" autofocus required>
-
-            </label>
-
-            <label>
-
-                <p>Brugernavn</p>
-
-                <input class="input" type="password" name="password" required>
-
-            </label>
-
-            <input class="submit" type="submit" value="Log ind" disabled>
-
-        </form>
-
-    </div><!-- loginBox -->
-    
-</div><!-- formWrapper -->
-                </textarea>
+                .floating-label {
+                    position: absolute;
+                    pointer-events: none;
+                    left: 20px;
+                    top: 12px;
+                    transition: 0.2s ease all;
+                    color: $text-color;
+                }
+            }
+        }</pre>
                 
             </div><!-- wrapper -->
             
