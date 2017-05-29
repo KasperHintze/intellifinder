@@ -7,7 +7,7 @@ include_once($prefix.'code/incl_db.php');
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <?php include_once($prefix.'includes/header.php'); ?>
     </head>
