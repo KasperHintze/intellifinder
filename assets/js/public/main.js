@@ -13706,7 +13706,7 @@ return Promise;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+					value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13725,112 +13725,112 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Footer = function (_Module) {
-	_inherits(Footer, _Module);
+					_inherits(Footer, _Module);
 
-	function Footer() {
-		_classCallCheck(this, Footer);
+					function Footer() {
+										_classCallCheck(this, Footer);
 
-		return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-	}
-
-	_createClass(Footer, [{
-		key: 'ready',
-		value: function ready(app) {
-
-			console.log('Loaded footer.js');
-
-			/* Vars */
-			var toggleCard = 0;
-			var windowWidth = $(window).width();
-
-			//Set the same animation time as in the CSS animation.
-			var animationTime = 500;
-
-			$(document).ready(function () {
-
-				// Do code
-
-				console.log('Running footer.js in all its glory');
-
-				// Get the window size on resize.
-				// This is used for de-activating the click events below
-				// under a certain screen size.
-
-				$(window).on('resize', function (event) {
-
-					windowWidth = $(window).width();
-				});
-
-				//Clicking the arrows changes the cards placing.
-				$('.fa-angle-left, .fa-angle-right').click(function () {
-
-					if (toggleCard === 0) {
-
-						$('.map').addClass('cardSwitchMap');
-						$('.contact-details').removeClass('cardSwitchContact');
-
-						//Time the z-index with the animation duration from SCSS.
-						setTimeout(function () {
-
-							$('.contact-details').css('z-index', 50);
-							$('.map').css('z-index', 110);
-						}, animationTime);
-
-						toggleCard = 1;
-					} else {
-
-						$('.map').removeClass('cardSwitchMap');
-						$('.contact-details').addClass('cardSwitchContact');
-
-						//Time the z-index with the animation duration from SCSS.
-						setTimeout(function () {
-
-							$('.contact-details').css('z-index', 110);
-							$('.map').css('z-index', 50);
-						}, animationTime);
-
-						toggleCard = 0;
+										return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
 					}
-				});
 
-				//Clicking on the actual card also changes the placing.
-				$('.map, .contact-details').click(function () {
+					_createClass(Footer, [{
+										key: 'ready',
+										value: function ready(app) {
 
-					var selectedCard = this.className;
+															console.log('Loaded footer.js');
 
-					if (selectedCard === "footer-card map" && toggleCard === 0 && windowWidth > 780) {
+															/* Vars */
+															var toggleCard = 0;
+															var windowWidth = $(window).width();
 
-						$('.map').addClass('cardSwitchMap');
-						$('.contact-details').removeClass('cardSwitchContact');
+															//Set the same animation time as in the CSS animation.
+															var animationTime = 500;
 
-						//Time the z-index with the animation duration from SCSS.
-						setTimeout(function () {
+															$(document).ready(function () {
 
-							$('.contact-details').css('z-index', 50);
-							$('.map').css('z-index', 110);
-						}, animationTime);
+																				// Do code
 
-						toggleCard = 1;
-					} else if (selectedCard === "footer-card contact-details" && toggleCard === 1 && windowWidth > 780) {
+																				console.log('Running footer.js in all its glory');
 
-						$('.map').removeClass('cardSwitchMap');
-						$('.contact-details').addClass('cardSwitchContact');
+																				// Get the window size on resize.
+																				// This is used for de-activating the click events below
+																				// under a certain screen size.
 
-						//Time the z-index with the animation duration from SCSS.
-						setTimeout(function () {
+																				$(window).on('resize', function (event) {
 
-							$('.contact-details').css('z-index', 110);
-							$('.map').css('z-index', 50);
-						}, animationTime);
+																									windowWidth = $(window).width();
+																				});
 
-						toggleCard = 0;
-					}
-				});
-			});
-		}
-	}]);
+																				//Clicking the arrows changes the cards placing.
+																				$('.fa-angle-left, .fa-angle-right').click(function () {
 
-	return Footer;
+																									if (toggleCard === 0) {
+
+																														$('.map').addClass('cardSwitchMap');
+																														$('.contact-details').removeClass('cardSwitchContact');
+
+																														//Time the z-index with the animation duration from SCSS.
+																														setTimeout(function () {
+
+																																			$('.contact-details').css('z-index', 50);
+																																			$('.map').css('z-index', 110);
+																														}, animationTime);
+
+																														toggleCard = 1;
+																									} else {
+
+																														$('.map').removeClass('cardSwitchMap');
+																														$('.contact-details').addClass('cardSwitchContact');
+
+																														//Time the z-index with the animation duration from SCSS.
+																														setTimeout(function () {
+
+																																			$('.contact-details').css('z-index', 110);
+																																			$('.map').css('z-index', 50);
+																														}, animationTime);
+
+																														toggleCard = 0;
+																									}
+																				});
+
+																				//Clicking on the actual card also changes the placing.
+																				$('.map, .contact-details').click(function () {
+
+																									var selectedCard = this.className;
+
+																									if (selectedCard === "footer-card map" && toggleCard === 0 && windowWidth > 780) {
+
+																														$('.map').addClass('cardSwitchMap');
+																														$('.contact-details').removeClass('cardSwitchContact');
+
+																														//Time the z-index with the animation duration from SCSS.
+																														setTimeout(function () {
+
+																																			$('.contact-details').css('z-index', 50);
+																																			$('.map').css('z-index', 110);
+																														}, animationTime);
+
+																														toggleCard = 1;
+																									} else if (selectedCard === "footer-card contact-details" && toggleCard === 1 && windowWidth > 780) {
+
+																														$('.map').removeClass('cardSwitchMap');
+																														$('.contact-details').addClass('cardSwitchContact');
+
+																														//Time the z-index with the animation duration from SCSS.
+																														setTimeout(function () {
+
+																																			$('.contact-details').css('z-index', 110);
+																																			$('.map').css('z-index', 50);
+																														}, animationTime);
+
+																														toggleCard = 0;
+																									}
+																				});
+															});
+										}
+					}]);
+
+					return Footer;
 }(_wrapper.Module);
 
 exports.default = Footer;
@@ -13946,7 +13946,7 @@ exports.default = News;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+                    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13965,290 +13965,290 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var NewsGrid = function (_Module) {
-    _inherits(NewsGrid, _Module);
+                    _inherits(NewsGrid, _Module);
 
-    function NewsGrid() {
-        _classCallCheck(this, NewsGrid);
+                    function NewsGrid() {
+                                        _classCallCheck(this, NewsGrid);
 
-        return _possibleConstructorReturn(this, (NewsGrid.__proto__ || Object.getPrototypeOf(NewsGrid)).apply(this, arguments));
-    }
-
-    _createClass(NewsGrid, [{
-        key: 'ready',
-        value: function ready(app) {
-
-            $(document).ready(function () {
-                console.log('Loaded news_grid.js');
-            });
-
-            if ($('#newsGrid')[0]) {
-
-                //Her er min grid function som fordeler hver boks ud i den nuværende mindste kolonne
-                var _makeGrid = function _makeGrid(gridSize, counter) {
-
-                    var col1Height = _checkHeight('.col-1 .box');
-
-                    var col2Height = _checkHeight('.col-2 .box');
-
-                    var col3Height = _checkHeight('.col-3 .box');
-
-                    console.log('col1Height = ' + col1Height);
-                    console.log('col2Height = ' + col2Height);
-                    console.log('col3Height = ' + col3Height);
-
-                    if (counter == 0) {
-
-                        console.log('if counter = 0');
-
-                        var imgText = _checkingArray(boxes[counter]['url'], boxes[counter]['text']);
-
-                        var newItem = $('.col-1').append('<a href="news_single.php?id=' + boxes[counter]['id'] + '"><div class="box" data-fixHeight="0" data-id="' + boxes[counter]['id'] + '">' + imgText + '</div></a>');
-                    } else if (col3Height < col1Height && col3Height < col2Height && gridSize >= 3) {
-
-                        console.log('else if 1');
-
-                        var imgText = _checkingArray(boxes[counter]['url'], boxes[counter]['text']);
-
-                        var newItem = $('.col-3').append('<a href="news_single.php?id=' + boxes[counter]['id'] + '"><div class="box" data-fixHeight="0" data-id="' + boxes[counter]['id'] + '">' + imgText + '</div></a>');
-                    } else if (col2Height < col1Height && col2Height <= col3Height && gridSize >= 2 || col2Height < col1Height && gridSize >= 2) {
-                        console.log('else if 2');
-
-                        var imgText = _checkingArray(boxes[counter]['url'], boxes[counter]['text']);
-
-                        var newItem = $('.col-2').append('<a href="news_single.php?id=' + boxes[counter]['id'] + '"><div class="box" data-fixHeight="0" data-id="' + boxes[counter]['id'] + '">' + imgText + '</div></a>');
-                    } else {
-
-                        console.log('else');
-
-                        var imgText = _checkingArray(boxes[counter]['url'], boxes[counter]['text']);
-
-                        var newItem = $('.col-1').append('<a href="news_single.php?id=' + boxes[counter]['id'] + '"><div class="box" data-fixHeight="0" data-id="' + boxes[counter]['id'] + '">' + imgText + '</div></a>');
+                                        return _possibleConstructorReturn(this, (NewsGrid.__proto__ || Object.getPrototypeOf(NewsGrid)).apply(this, arguments));
                     }
 
-                    if (counter == boxes.length - 1) {
+                    _createClass(NewsGrid, [{
+                                        key: 'ready',
+                                        value: function ready(app) {
 
-                        _loadImages();
-                    } else {
+                                                            $(document).ready(function () {
+                                                                                console.log('Loaded news_grid.js');
+                                                            });
 
-                        //console.log('counter = '+counter);
+                                                            if ($('#newsGrid')[0]) {
 
-                        if (boxes[counter]['url'] == '') {
+                                                                                //Her er min grid function som fordeler hver boks ud i den nuværende mindste kolonne
+                                                                                var _makeGrid = function _makeGrid(gridSize, counter) {
 
-                            var counter = counter + 1;
+                                                                                                    var col1Height = _checkHeight('.col-1 .box');
 
-                            _makeGrid(gridSize, counter);
-                        } else {
+                                                                                                    var col2Height = _checkHeight('.col-2 .box');
 
-                            newItem.children().last().find('img').css('opacity', '0');
+                                                                                                    var col3Height = _checkHeight('.col-3 .box');
 
-                            var imgLoad = $("<img />");
-                            imgLoad.attr("src", '../assets/img/uploaded/news/' + boxes[counter]['url']);
-                            imgLoad.unbind("load");
-                            imgLoad.bind("load", function () {
+                                                                                                    console.log('col1Height = ' + col1Height);
+                                                                                                    console.log('col2Height = ' + col2Height);
+                                                                                                    console.log('col3Height = ' + col3Height);
 
-                                //Tjek aspect ratio
-                                var newWidth = newItem.children().last().outerWidth() / 100 * 95.5;
+                                                                                                    if (counter == 0) {
 
-                                var newHeight = newWidth * (this.height / this.width);
+                                                                                                                        console.log('if counter = 0');
 
-                                console.log('newHeight = %c ' + newHeight, 'color:blue;');
+                                                                                                                        var imgText = _checkingArray(boxes[counter]['url'], boxes[counter]['text']);
 
-                                // Get image sizes
-                                newItem.children().last().attr('data-fixHeight', newHeight);
+                                                                                                                        var newItem = $('.col-1').append('<a href="news_single.php?id=' + boxes[counter]['id'] + '"><div class="box" data-fixHeight="0" data-id="' + boxes[counter]['id'] + '">' + imgText + '</div></a>');
+                                                                                                    } else if (col3Height < col1Height && col3Height < col2Height && gridSize >= 3) {
 
-                                newItem.children().last().find('img').css('min-height', newHeight);
+                                                                                                                        console.log('else if 1');
 
-                                counter = counter + 1;
+                                                                                                                        var imgText = _checkingArray(boxes[counter]['url'], boxes[counter]['text']);
 
-                                _makeGrid(gridSize, counter);
-                            });
-                        } //ELSE OF IF BOXES URL == ''
-                    } //ELSE OF IF COUNTER == 10
+                                                                                                                        var newItem = $('.col-3').append('<a href="news_single.php?id=' + boxes[counter]['id'] + '"><div class="box" data-fixHeight="0" data-id="' + boxes[counter]['id'] + '">' + imgText + '</div></a>');
+                                                                                                    } else if (col2Height < col1Height && col2Height <= col3Height && gridSize >= 2 || col2Height < col1Height && gridSize >= 2) {
+                                                                                                                        console.log('else if 2');
 
-                }; //END OF MAKEGRID
+                                                                                                                        var imgText = _checkingArray(boxes[counter]['url'], boxes[counter]['text']);
 
-                var _loadImages = function _loadImages() {
+                                                                                                                        var newItem = $('.col-2').append('<a href="news_single.php?id=' + boxes[counter]['id'] + '"><div class="box" data-fixHeight="0" data-id="' + boxes[counter]['id'] + '">' + imgText + '</div></a>');
+                                                                                                    } else {
 
-                    _imageHeight();
+                                                                                                                        console.log('else');
 
-                    $('#loader').hide();
-                };
+                                                                                                                        var imgText = _checkingArray(boxes[counter]['url'], boxes[counter]['text']);
 
-                var _imageHeight = function _imageHeight() {
+                                                                                                                        var newItem = $('.col-1').append('<a href="news_single.php?id=' + boxes[counter]['id'] + '"><div class="box" data-fixHeight="0" data-id="' + boxes[counter]['id'] + '">' + imgText + '</div></a>');
+                                                                                                    }
 
-                    var wHeight = $(window).height() - 100;
+                                                                                                    if (counter == boxes.length - 1) {
 
-                    $('.images').each(function () {
+                                                                                                                        _loadImages();
+                                                                                                    } else {
 
-                        var scrollTop = $(window).scrollTop();
+                                                                                                                        //console.log('counter = '+counter);
 
-                        var elementOffset = $(this).offset().top;
+                                                                                                                        if (boxes[counter]['url'] == '') {
 
-                        var distance = elementOffset - scrollTop;
+                                                                                                                                            var counter = counter + 1;
 
-                        if (distance < wHeight) {
+                                                                                                                                            _makeGrid(gridSize, counter);
+                                                                                                                        } else {
 
-                            $(this).attr('src', '../assets/img/uploaded/news/' + $(this).attr('data-src'));
+                                                                                                                                            newItem.children().last().find('img').css('opacity', '0');
 
-                            $(this).css('opacity', '1');
-                        }
-                    });
-                };
+                                                                                                                                            var imgLoad = $("<img />");
+                                                                                                                                            imgLoad.attr("src", '../assets/img/uploaded/news/' + boxes[counter]['url']);
+                                                                                                                                            imgLoad.unbind("load");
+                                                                                                                                            imgLoad.bind("load", function () {
 
-                var _checkHeight = function _checkHeight(elem) {
+                                                                                                                                                                //Tjek aspect ratio
+                                                                                                                                                                var newWidth = newItem.children().last().outerWidth() / 100 * 95.5;
 
-                    var thisHeight = 0;
+                                                                                                                                                                var newHeight = newWidth * (this.height / this.width);
 
-                    $(elem).each(function () {
+                                                                                                                                                                console.log('newHeight = %c ' + newHeight, 'color:blue;');
 
-                        var boxHeight = parseFloat($(this).outerHeight());
+                                                                                                                                                                // Get image sizes
+                                                                                                                                                                newItem.children().last().attr('data-fixHeight', newHeight);
 
-                        var fixHeight = parseFloat($(this).attr('data-fixHeight'));
+                                                                                                                                                                newItem.children().last().find('img').css('min-height', newHeight);
 
-                        thisHeight += boxHeight + fixHeight;
-                    });
+                                                                                                                                                                counter = counter + 1;
 
-                    return thisHeight;
-                };
+                                                                                                                                                                _makeGrid(gridSize, counter);
+                                                                                                                                            });
+                                                                                                                        } //ELSE OF IF BOXES URL == ''
+                                                                                                    } //ELSE OF IF COUNTER == 10
 
-                //Her tjeker jeg mit box array og tjekker om tekst eller billede url er tomt og sender en variable med tilbage
+                                                                                }; //END OF MAKEGRID
 
+                                                                                var _loadImages = function _loadImages() {
 
-                var _checkingArray = function _checkingArray(img, text) {
+                                                                                                    _imageHeight();
 
-                    if (img == '') {
+                                                                                                    $('#loader').hide();
+                                                                                };
 
-                        var newImg = '';
-                    } else {
+                                                                                var _imageHeight = function _imageHeight() {
 
-                        var newImg = '<img class="images" alt="News image" data-src="' + img + '">';
-                    }
+                                                                                                    var wHeight = $(window).height() - 100;
 
-                    if (text == '') {
+                                                                                                    $('.images').each(function () {
 
-                        var newText = '';
-                    } else {
+                                                                                                                        var scrollTop = $(window).scrollTop();
 
-                        var newText = '<p>' + text + '</p>';
-                    }
+                                                                                                                        var elementOffset = $(this).offset().top;
 
-                    var imgText = newImg + newText;
+                                                                                                                        var distance = elementOffset - scrollTop;
 
-                    return imgText;
-                };
+                                                                                                                        if (distance < wHeight) {
 
-                //Her rydder jeg alle kolonner så jeg kan fylde det igen. Den her funktion bliver brugt til responsive
+                                                                                                                                            $(this).attr('src', '../assets/img/uploaded/news/' + $(this).attr('data-src'));
 
+                                                                                                                                            $(this).css('opacity', '1');
+                                                                                                                        }
+                                                                                                    });
+                                                                                };
 
-                var _clearCols = function _clearCols() {
+                                                                                var _checkHeight = function _checkHeight(elem) {
 
-                    $('.col').each(function () {
+                                                                                                    var thisHeight = 0;
 
-                        $(this).html('');
-                    });
-                };
+                                                                                                    $(elem).each(function () {
 
-                var boxes = [];
+                                                                                                                        var boxHeight = parseFloat($(this).outerHeight());
 
-                $.ajax({
+                                                                                                                        var fixHeight = parseFloat($(this).attr('data-fixHeight'));
 
-                    url: "../code/code_getNews.php",
-                    type: 'POST',
+                                                                                                                        thisHeight += boxHeight + fixHeight;
+                                                                                                    });
 
-                    success: function success(data) {
+                                                                                                    return thisHeight;
+                                                                                };
 
-                        var result = JSON.parse(data);
+                                                                                //Her tjeker jeg mit box array og tjekker om tekst eller billede url er tomt og sender en variable med tilbage
 
-                        $.each(result, function (i, item) {
 
-                            console.log(item);
+                                                                                var _checkingArray = function _checkingArray(img, text) {
 
-                            boxes.push({
-                                id: item.id,
-                                url: item.url,
-                                text: item.des
-                            });
-                        });
+                                                                                                    if (img == '') {
 
-                        var windowWidth = $(window).width();
+                                                                                                                        var newImg = '';
+                                                                                                    } else {
 
-                        if (windowWidth > 1200) {
+                                                                                                                        var newImg = '<img class="images" alt="News image" data-src="' + img + '">';
+                                                                                                    }
 
-                            window.dSize = 3;
+                                                                                                    if (text == '') {
 
-                            _makeGrid(3, 0);
-                        } else if (windowWidth > 810) {
+                                                                                                                        var newText = '';
+                                                                                                    } else {
 
-                            window.dSize = 2;
+                                                                                                                        var newText = '<p>' + text + '</p>';
+                                                                                                    }
 
-                            _makeGrid(2, 0);
-                        } else if (windowWidth < 809) {
+                                                                                                    var imgText = newImg + newText;
 
-                            window.dSize = 1;
+                                                                                                    return imgText;
+                                                                                };
 
-                            _makeGrid(1, 0);
-                        } else {
+                                                                                //Her rydder jeg alle kolonner så jeg kan fylde det igen. Den her funktion bliver brugt til responsive
 
-                            alert('else');
 
-                            window.dSize = 3;
-                        }
-                    }
+                                                                                var _clearCols = function _clearCols() {
 
-                });
+                                                                                                    $('.col').each(function () {
 
-                //Her tjekker jeg efter skærm størrelse når man resizer siden og laver henholdsvis 3-2 eller 1 kolonne
-                $(window).on('resize', function () {
+                                                                                                                        $(this).html('');
+                                                                                                    });
+                                                                                };
 
-                    var ww = $(window).width();
+                                                                                var boxes = [];
 
-                    if (ww > 1200) {
+                                                                                $.ajax({
 
-                        if (dSize == 3) {} else {
+                                                                                                    url: "../code/code_getNews.php",
+                                                                                                    type: 'POST',
 
-                            _clearCols();
+                                                                                                    success: function success(data) {
 
-                            _makeGrid(3, 0);
+                                                                                                                        var result = JSON.parse(data);
 
-                            window.dSize = 3;
-                        }
-                    } else if (ww > 810) {
+                                                                                                                        $.each(result, function (i, item) {
 
-                        if (dSize == 2) {} else {
+                                                                                                                                            console.log(item);
 
-                            _clearCols();
+                                                                                                                                            boxes.push({
+                                                                                                                                                                id: item.id,
+                                                                                                                                                                url: item.url,
+                                                                                                                                                                text: item.des
+                                                                                                                                            });
+                                                                                                                        });
 
-                            _makeGrid(2, 0);
+                                                                                                                        var windowWidth = $(window).width();
 
-                            window.dSize = 2;
-                        }
-                    } else if (ww < 809) {
+                                                                                                                        if (windowWidth > 1200) {
 
-                        if (dSize == 1) {} else {
+                                                                                                                                            window.dSize = 3;
 
-                            _clearCols();
+                                                                                                                                            _makeGrid(3, 0);
+                                                                                                                        } else if (windowWidth > 810) {
 
-                            _makeGrid(1, 0);
+                                                                                                                                            window.dSize = 2;
 
-                            window.dSize = 1;
-                        }
-                    } else {
+                                                                                                                                            _makeGrid(2, 0);
+                                                                                                                        } else if (windowWidth < 809) {
 
-                        console.log('else');
-                    }
-                });
+                                                                                                                                            window.dSize = 1;
 
-                $(window).scroll(function () {
+                                                                                                                                            _makeGrid(1, 0);
+                                                                                                                        } else {
 
-                    _imageHeight();
-                });
-            }
+                                                                                                                                            alert('else');
 
-            // END
-        }
-    }]);
+                                                                                                                                            window.dSize = 3;
+                                                                                                                        }
+                                                                                                    }
 
-    return NewsGrid;
+                                                                                });
+
+                                                                                //Her tjekker jeg efter skærm størrelse når man resizer siden og laver henholdsvis 3-2 eller 1 kolonne
+                                                                                $(window).on('resize', function () {
+
+                                                                                                    var ww = $(window).width();
+
+                                                                                                    if (ww > 1200) {
+
+                                                                                                                        if (dSize == 3) {} else {
+
+                                                                                                                                            _clearCols();
+
+                                                                                                                                            _makeGrid(3, 0);
+
+                                                                                                                                            window.dSize = 3;
+                                                                                                                        }
+                                                                                                    } else if (ww > 810) {
+
+                                                                                                                        if (dSize == 2) {} else {
+
+                                                                                                                                            _clearCols();
+
+                                                                                                                                            _makeGrid(2, 0);
+
+                                                                                                                                            window.dSize = 2;
+                                                                                                                        }
+                                                                                                    } else if (ww < 809) {
+
+                                                                                                                        if (dSize == 1) {} else {
+
+                                                                                                                                            _clearCols();
+
+                                                                                                                                            _makeGrid(1, 0);
+
+                                                                                                                                            window.dSize = 1;
+                                                                                                                        }
+                                                                                                    } else {
+
+                                                                                                                        console.log('else');
+                                                                                                    }
+                                                                                });
+
+                                                                                $(window).scroll(function () {
+
+                                                                                                    _imageHeight();
+                                                                                });
+                                                            }
+
+                                                            // END
+                                        }
+                    }]);
+
+                    return NewsGrid;
 }(_wrapper.Module);
 
 exports.default = NewsGrid;
@@ -14257,7 +14257,7 @@ exports.default = NewsGrid;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14273,32 +14273,32 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Scroll = function (_Module) {
-    _inherits(Scroll, _Module);
+  _inherits(Scroll, _Module);
 
-    function Scroll() {
-        _classCallCheck(this, Scroll);
+  function Scroll() {
+    _classCallCheck(this, Scroll);
 
-        return _possibleConstructorReturn(this, (Scroll.__proto__ || Object.getPrototypeOf(Scroll)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Scroll.__proto__ || Object.getPrototypeOf(Scroll)).apply(this, arguments));
+  }
+
+  _createClass(Scroll, [{
+    key: 'ready',
+    value: function ready(app) {
+
+      $('nav ul li a').click(function () {
+
+        window.thisitem = $(this);
+        console.log(thisitem);
+
+        $('html, body').animate({
+          scrollTop: $($(thisitem).attr('href')).offset().top - 200
+        }, 1000);
+        return false;
+      });
     }
+  }]);
 
-    _createClass(Scroll, [{
-        key: 'ready',
-        value: function ready(app) {
-
-            $('nav ul li a').click(function () {
-
-                window.thisitem = $(this);
-                console.log(thisitem);
-
-                $('html, body').animate({
-                    scrollTop: $($(thisitem).attr('href')).offset().top - 200
-                }, 1000);
-                return false;
-            });
-        }
-    }]);
-
-    return Scroll;
+  return Scroll;
 }(_wrapper.Module);
 
 exports.default = Scroll;
