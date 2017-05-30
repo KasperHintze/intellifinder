@@ -6,6 +6,7 @@
 
     <head>
         <?php include_once($prefix.'includes/header.php'); ?>
+        <link rel="stylesheet" href="../assets/highlighter/prettify.css" />
     </head>
     
     <body class="styleguide">
@@ -71,7 +72,7 @@
                 </div><!-- formWrapper -->
                 
                 <p>Her ser vi Sass stylingen for<code>Forms</code>:</p>
-                <pre>
+                <pre class="prettyprint">
 <code>form {
             float: left;
             label {
@@ -138,47 +139,8 @@
             
         </div><!-- content -->
         
-        <script>
-            
-            
-            $(document).keyup(function() {
-                
-                isOkay = false;
-                
-                $('.input').each(function() {
-                    
-                    if($(this).val().length == 0){
-                        
-                        isOkay = false;
-                        
-                    }else {
-                        
-                        isOkay = true;
-                        
-                    }
-                    
-                });
-               
-               if(isOkay){
-                   
-                    $('.submit').css('background','#2ecc71'); 
-                    $('.submit').css('color','#fff'); 
-                    $('.submit').css('border-bottom','3px solid #2ecc71');
-                    $('.submit').removeAttr('disabled');
-                   
-               }else {
-                   
-                   
-                    $('.submit').css('background','#DDDDDD'); 
-                    $('.submit').css('color','#333'); 
-                    $('.submit').css('border-bottom','3px solid #d0d0d0');   
-                    $('.submit').attr('disabled','disabled');
-                   
-               }
-                
-            });
-
-        </script>
+        <script src="../assets/highlighter/prettify.js"></script>
+        <script>prettyPrint();</script>
         
     </body>
     

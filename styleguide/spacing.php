@@ -6,6 +6,7 @@
 
     <head>
         <?php include_once($prefix.'includes/header.php'); ?>
+        <link rel="stylesheet" href="../assets/highlighter/prettify.css" />
     </head>
     
     <body class="styleguide">
@@ -49,7 +50,7 @@
                 <p>Den generelle padding er 25px, det er med til at give siden en masse fri rum så tingende spiller bedre sammen.</p>
                 
                 <p>Her ser vi Sass stylingen for<code>Padding</code>:</p>
-                <pre>
+                <pre class="prettyprint">
 <code>element {
 
     padding: 25px;
@@ -61,7 +62,7 @@
                 <p>Den generelle margin er 30px, det er med til at give siden en masse fri rum så tingende spiller bedre sammen.</p>
                 
                 <p>Her ser vi Sass stylingen for<code>Margin</code>:</p>
-                <pre>
+                <pre class="prettyprint">
 <code>element {
 
     margin: 30px;
@@ -71,6 +72,9 @@
             </div><!-- wrapper -->
             
         </div><!-- content -->
+
+        <script src="../assets/highlighter/prettify.js"></script>
+        <script>prettyPrint();</script>
         
     </body>
     

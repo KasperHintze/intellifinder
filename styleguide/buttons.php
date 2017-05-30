@@ -6,6 +6,7 @@
 
     <head>
         <?php include_once($prefix.'includes/header.php'); ?>
+        <link rel="stylesheet" href="../assets/highlighter/prettify.css" />
     </head>
     
     <body class="styleguide">
@@ -51,7 +52,7 @@
                 </div><!-- imgWrapper -->
                 
                 <p>Her ser vi Sass stylingen for<code>Knapper</code>:</p>
-                <pre>
+                <pre class="prettyprint">
 <code>.btn {
     font-size: 20px;
     height: 50px;
@@ -145,6 +146,9 @@ span {
             </div><!-- wrapper -->
             
         </div><!-- content -->
+
+        <script src="../assets/highlighter/prettify.js"></script>
+        <script>prettyPrint();</script>
         
     </body>
     

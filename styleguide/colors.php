@@ -6,6 +6,7 @@
 
     <head>
         <?php include_once($prefix.'includes/header.php'); ?>
+        <link rel="stylesheet" href="../assets/highlighter/prettify.css" />
     </head>
     
     <body class="styleguide">
@@ -67,7 +68,7 @@
                 </div><!-- imgWrapper -->
                 
                 <p>Her ser vi farvekoderne til<code>Alle farver</code>:</p>
-                <pre>
+                <pre class="prettyprint">
 <code>/* Primary colors */
 
 $primary-orange: #FAA61A;
@@ -85,6 +86,9 @@ $graytone-background: #F6F9FC;
             </div><!-- wrapper -->
             
         </div><!-- content -->
+
+        <script src="../assets/highlighter/prettify.js"></script>
+        <script>prettyPrint();</script>
         
     </body>
     
