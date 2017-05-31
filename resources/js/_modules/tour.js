@@ -62,6 +62,7 @@ export default class Tour extends Module {
                 for(i = 0; i < featureCount; i++) { 
                   $(".dotWrapper").append("<div class='dot' data-id='"+i+"'></div>");
                 }
+               
                 // Setting first dot to active
                 $(".dotWrapper .dot:first-child").addClass('dotActive');
 
@@ -124,8 +125,6 @@ export default class Tour extends Module {
             var index = 5000;
             
             $('.feature').each(function(){
-                
-                console.log('Running');
 
                 $(this).css('z-index', index);
                     
