@@ -3,7 +3,7 @@
     $hostUri = $_SERVER['REQUEST_URI'];
     $link = "#cases";
     
-    if($hostUri == "/intellifinder/index.php"){
+    if($hostUri == "/intellifinder/index.php" || "/intellifinder/"){
 
       $link = "#cases";
 
